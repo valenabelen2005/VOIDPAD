@@ -1,6 +1,7 @@
 import { notFound } from 'next/navigation'
 import { getCollectionByHandle } from '@/lib/shopify'
 import { ProductGrid } from '@/components/product/ProductGrid'
+import { CollectionHeader } from '@/components/collection/CollectionHeader'
 import type { Metadata } from 'next'
 
 type Props = { params: Promise<{ handle: string }>; searchParams: Promise<{ after?: string }> }
@@ -20,12 +21,11 @@ export default async function CollectionPage({ params, searchParams }: Props) {
 
   return (
     <div className="max-w-7xl mx-auto px-4 sm:px-6 py-10">
-      <div className="mb-8">
-        <h1 className="text-2xl font-bold text-text">{collection.title}</h1>
-        {collection.description && (
-          <p className="text-sm text-muted mt-1">{collection.description}</p>
-        )}
-      </div>
+      <CollectionHeader
+        title={collection.title}
+        handle={handle}
+        fallbackDesc={collection.description}
+      />
 
       <ProductGrid products={collection.products.nodes} columns={4} />
 
