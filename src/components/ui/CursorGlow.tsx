@@ -19,8 +19,10 @@ export function CursorGlow() {
       my = e.clientY
     }
 
-    const dotEl = dot
-    const ringEl = ring
+    // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
+    const dotEl = dotRef.current!
+    // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
+    const ringEl = ringRef.current!
 
     function loop() {
       rx += (mx - rx) * 0.12
