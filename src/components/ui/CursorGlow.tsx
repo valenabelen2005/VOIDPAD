@@ -19,11 +19,14 @@ export function CursorGlow() {
       my = e.clientY
     }
 
+    const dotEl = dot
+    const ringEl = ring
+
     function loop() {
       rx += (mx - rx) * 0.12
       ry += (my - ry) * 0.12
-      dot.style.transform = `translate(${mx - 3}px, ${my - 3}px)`
-      ring.style.transform = `translate(${rx - 14}px, ${ry - 14}px)`
+      dotEl.style.transform = `translate(${mx - 3}px, ${my - 3}px)`
+      ringEl.style.transform = `translate(${rx - 14}px, ${ry - 14}px)`
       raf = requestAnimationFrame(loop)
     }
 
