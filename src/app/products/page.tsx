@@ -1,5 +1,6 @@
 import { getProducts } from '@/lib/shopify'
 import { ProductGrid } from '@/components/product/ProductGrid'
+import { SortSelect } from '@/components/product/SortSelect'
 
 type SearchParams = Promise<{ sort?: string; q?: string; after?: string }>
 
@@ -38,17 +39,7 @@ export default async function ProductsPage({ searchParams }: { searchParams: Sea
         <form method="GET" className="flex items-center gap-2">
           {params.q && <input type="hidden" name="q" value={params.q} />}
           <label htmlFor="sort" className="text-xs text-[#8888a0]">Sort by</label>
-          <select
-            id="sort"
-            name="sort"
-            defaultValue={activeSort.value}
-            onChange={(e) => (e.currentTarget.form as HTMLFormElement).submit()}
-            className="bg-[#111118] border border-[#1e1e2e] text-sm text-[#f0f0f5] rounded-lg px-3 py-1.5 focus:outline-none focus:border-[#00e5ff]"
-          >
-            {sortOptions.map((s) => (
-              <option key={s.value} value={s.value}>{s.label}</option>
-            ))}
-          </select>
+          <SortSelect options={sortOptions.map(s => ({ label: s.label, value: s.value }))} value={activeSort.value} />
         </form>
       </div>
 

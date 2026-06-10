@@ -1,13 +1,13 @@
 import { Hero } from '@/components/home/Hero'
-import { FeaturedProducts } from '@/components/home/FeaturedProducts'
 import { CategoryGrid } from '@/components/home/CategoryGrid'
+import { Reviews } from '@/components/home/Reviews'
 
 export default function HomePage() {
   return (
     <>
       <Hero />
-      <FeaturedProducts />
       <CategoryGrid />
+      <Reviews />
     </>
   )
 }

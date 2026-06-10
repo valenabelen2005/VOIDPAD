@@ -1,15 +1,13 @@
-const messages = [
-  'Free shipping on orders over €50',
-  'Buy 2 Get 1 FREE — applied automatically at checkout',
-  'Printed & shipped in 3–5 business days',
-  'Custom designs available — upload your own art',
-]
+'use client'
+import { useT } from '@/hooks/useT'
 
 export function AnnouncementBar() {
+  const t = useT()
+  const messages = [t('announce.1'), t('announce.2'), t('announce.3'), t('announce.4')]
   const text = messages.join('   •   ')
 
   return (
-    <div className="bg-[#7c3aed] text-white text-xs font-medium py-2 overflow-hidden">
+    <div className="bg-violet text-white text-xs font-medium py-2 overflow-hidden">
       <div
         className="whitespace-nowrap"
         style={{ animation: 'marquee 30s linear infinite' }}

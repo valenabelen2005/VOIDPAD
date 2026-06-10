@@ -1,6 +1,7 @@
 import Link from 'next/link'
 import Image from 'next/image'
 import { getCollections } from '@/lib/shopify'
+import { CategoryGridTitle } from './CategoryGridTitle'
 
 export async function CategoryGrid() {
   const collections = await getCollections(8)
@@ -8,10 +9,10 @@ export async function CategoryGrid() {
   if (!collections.length) return null
 
   return (
-    <section className="max-w-7xl mx-auto px-4 sm:px-6 py-12 border-t border-[#1e1e2e]">
-      <div className="mb-8">
-        <p className="text-xs font-semibold text-[#7c3aed] uppercase tracking-widest mb-1">Browse</p>
-        <h2 className="text-2xl sm:text-3xl font-bold text-[#f0f0f5]">Shop by Category</h2>
+    <section className="max-w-7xl mx-auto px-4 sm:px-6 py-12">
+      <div className="mb-8 text-center">
+        {/* <p className="text-xs font-semibold text-[#7c3aed] uppercase tracking-widest mb-1">Browse</p> */}
+        <CategoryGridTitle />
       </div>
 
       <div className="grid grid-cols-2 md:grid-cols-4 gap-3 sm:gap-4">
@@ -21,7 +22,7 @@ export async function CategoryGrid() {
             <Link
               key={col.handle}
               href={`/collections/${col.handle}`}
-              className="group relative aspect-square overflow-hidden rounded-xl bg-[#111118] border border-[#1e1e2e] hover:border-[#7c3aed]/50 transition-all duration-300"
+              className="group relative aspect-[4/3] overflow-hidden rounded-2xl bg-[#111118] shadow-md hover:shadow-xl transition-shadow duration-300"
             >
               {img && (
                 <Image
@@ -31,9 +32,10 @@ export async function CategoryGrid() {
                   className="object-cover group-hover:scale-105 transition-transform duration-500"
                 />
               )}
-              <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
-              <div className="absolute bottom-3 left-3 right-3">
-                <p className="text-sm font-bold text-white">{col.title}</p>
+              <div className="absolute bottom-3 left-0 right-0 flex justify-center">
+                <span className="bg-white text-black text-sm font-bold px-4 py-1.5 rounded-full shadow-md">
+                  {col.title}
+                </span>
               </div>
             </Link>
           )
