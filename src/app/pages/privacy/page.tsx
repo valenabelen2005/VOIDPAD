@@ -1,119 +1,156 @@
-export const metadata = { title: 'Privacy Policy — VoidPad' }
+'use client'
+import { useLanguageStore } from '@/store/language'
 
-export default function PrivacyPage() {
-  return (
-    <div className="max-w-3xl mx-auto px-4 sm:px-6 py-16">
-      <h1 className="text-3xl font-black text-[#f0f0f5] mb-2">Privacy Policy</h1>
-      <p className="text-sm text-[#8888a0] mb-10">Last updated: June 10, 2026</p>
-
-      <div className="prose prose-invert prose-sm max-w-none space-y-6 text-[#c0c0d0] leading-relaxed">
-
-        <p>VoidPad operates this store and website, including all related information, content, features, tools, products and services, in order to provide you, the customer, with a curated shopping experience (the "Services"). VoidPad is powered by Shopify, which enables us to provide the Services to you. This Privacy Policy describes how we collect, use, and disclose your personal information when you visit, use, or make a purchase or other transaction using the Services or otherwise communicate with us. If there is a conflict between our Terms of Service and this Privacy Policy, this Privacy Policy controls with respect to the collection, processing, and disclosure of your personal information.</p>
-
-        <p>Please read this Privacy Policy carefully. By using and accessing any of the Services, you acknowledge that you have read this Privacy Policy and understand the collection, use, and disclosure of your information as described in this Privacy Policy.</p>
-
-        <Section title="Personal Information We Collect or Process">
-          <p>When we use the term "personal information," we are referring to information that identifies or can reasonably be linked to you or another person. Personal information does not include information that is collected anonymously or that has been de-identified, so that it cannot identify or be reasonably linked to you. We may collect or process the following categories of personal information, including inferences drawn from this personal information, depending on how you interact with the Services, where you live, and as permitted or required by applicable law:</p>
-          <ul>
-            <li>Contact details including your name, address, billing address, shipping address, phone number, and email address.</li>
-            <li>Financial information including credit card, debit card, and financial account numbers, payment card information, financial account information, transaction details, form of payment, payment confirmation and other payment details.</li>
-            <li>Account information including your username, password, security questions, preferences and settings.</li>
-            <li>Transaction information including the items you view, put in your cart, add to your wishlist, or purchase, return, exchange or cancel and your past transactions.</li>
-            <li>Communications with us including the information you include in communications with us, for example, when sending a customer support inquiry.</li>
-            <li>Device information including information about your device, browser, or network connection, your IP address, and other unique identifiers.</li>
-            <li>Usage information including information regarding your interaction with the Services, including how and when you interact with or navigate the Services.</li>
-          </ul>
-        </Section>
-
-        <Section title="Personal Information Sources">
-          <p>We may collect personal information from the following sources:</p>
-          <ul>
-            <li>Directly from you including when you create an account, visit or use the Services, communicate with us, or otherwise provide us with your personal information.</li>
-            <li>Automatically through the Services including from your device when you use our products or services or visit our websites, and through the use of cookies and similar technologies.</li>
-            <li>From our service providers including when we engage them to enable certain technology and when they collect or process your personal information on our behalf.</li>
-            <li>From our partners or other third parties.</li>
-          </ul>
-        </Section>
-
-        <Section title="How We Use Your Personal Information">
-          <ul>
-            <li><strong>Provide, Tailor, and Improve the Services.</strong> We use your personal information to provide you with the Services, including to process your payments, fulfill your orders, remember your preferences, send account notifications, process purchases and transactions, arrange for shipping, facilitate returns and exchanges, and create a customized shopping experience for you.</li>
-            <li><strong>Marketing and Advertising.</strong> We use your personal information for marketing and promotional purposes, such as to send marketing, advertising and promotional communications by email, text message or postal mail, and to show you online advertisements for products or services.</li>
-            <li><strong>Security and Fraud Prevention.</strong> We use your personal information to authenticate your account, provide a secure payment and shopping experience, and detect, investigate or take action regarding possible fraudulent, illegal, unsafe, or malicious activity.</li>
-            <li><strong>Communicating with You.</strong> We use your personal information to provide you with customer support and to maintain our business relationship with you.</li>
-            <li><strong>Legal Reasons.</strong> We use your personal information to comply with applicable law or respond to valid legal process, including requests from law enforcement or government agencies.</li>
-          </ul>
-        </Section>
-
-        <Section title="How We Disclose Personal Information">
-          <p>In certain circumstances, we may disclose your personal information to third parties for legitimate purposes subject to this Privacy Policy, including:</p>
-          <ul>
-            <li>With Shopify, vendors and other third parties who perform services on our behalf (e.g. IT management, payment processing, data analytics, customer support, cloud storage, fulfillment and shipping).</li>
-            <li>With business and marketing partners to provide marketing services and advertise to you.</li>
-            <li>When you direct, request us or otherwise consent to our disclosure of certain information to third parties.</li>
-            <li>With our affiliates or otherwise within our corporate group.</li>
-            <li>In connection with a business transaction such as a merger or bankruptcy, to comply with any applicable legal obligations, to enforce any applicable terms of service or policies, and to protect or defend the Services, our rights, and the rights of our users or others.</li>
-          </ul>
-        </Section>
-
-        <Section title="Relationship with Shopify">
-          <p>The Services are hosted by Shopify, which collects and processes personal information about your access to and use of the Services in order to provide and improve the Services for you. Information you submit to the Services will be transmitted to and shared with Shopify as well as third parties that may be located in countries other than where you reside. To learn more about how Shopify uses your personal information and any rights you may have, you can visit the <a href="https://www.shopify.com/legal/privacy/consumers" className="text-cyan hover:underline" target="_blank" rel="noopener noreferrer">Shopify Consumer Privacy Policy</a>.</p>
-        </Section>
-
-        <Section title="Third Party Websites and Links">
-          <p>The Services may provide links to websites or other online platforms operated by third parties. We do not guarantee and are not responsible for the privacy or security of such sites. Our inclusion of such links does not imply any endorsement of the content on such platforms or of their owners or operators.</p>
-        </Section>
-
-        <Section title="Children's Data">
-          <p>The Services are not intended to be used by children, and we do not knowingly collect any personal information about children under the age of majority in your jurisdiction. If you are the parent or guardian of a child who has provided us with their personal information, you may contact us using the contact details set out below to request that it be deleted.</p>
-        </Section>
-
-        <Section title="Security and Retention of Your Information">
-          <p>Please be aware that no security measures are perfect or impenetrable, and we cannot guarantee "perfect security." How long we retain your personal information depends on different factors, such as whether we need the information to maintain your account, to provide you with Services, comply with legal obligations, resolve disputes or enforce other applicable contracts and policies.</p>
-        </Section>
-
-        <Section title="Your Rights and Choices">
-          <p>Depending on where you live, you may have some or all of the rights listed below in relation to your personal information:</p>
-          <ul>
-            <li><strong>Right to Access / Know.</strong> You may have a right to request access to personal information that we hold about you.</li>
-            <li><strong>Right to Delete.</strong> You may have a right to request that we delete personal information we maintain about you.</li>
-            <li><strong>Right to Correct.</strong> You may have a right to request that we correct inaccurate personal information we maintain about you.</li>
-            <li><strong>Right of Portability.</strong> You may have a right to receive a copy of the personal information we hold about you.</li>
-            <li><strong>Right to Opt out of Sale or Sharing for Targeted Advertising.</strong> Depending on where you reside, you may have a right to opt out of the "sale" or "share" of your personal information.</li>
-            <li><strong>Managing Communication Preferences.</strong> You may opt out of receiving promotional emails at any time by using the unsubscribe option displayed in our emails to you.</li>
-          </ul>
-          <p>If you reside in the UK or European Economic Area, you may also have the right to object to or restrict our processing of personal information, and to withdraw consent where we rely on it.</p>
-          <p>You may exercise any of these rights by contacting us using the contact details provided below. To learn more about how Shopify handles your data, visit <a href="https://privacy.shopify.com/en" className="text-cyan hover:underline" target="_blank" rel="noopener noreferrer">privacy.shopify.com</a>.</p>
-        </Section>
-
-        <Section title="International Transfers">
-          <p>Please note that we may transfer, store and process your personal information outside the country you live in. If we transfer your personal information out of the European Economic Area or the United Kingdom, we will rely on recognized transfer mechanisms like the European Commission's Standard Contractual Clauses.</p>
-        </Section>
-
-        <Section title="Changes to This Privacy Policy">
-          <p>We may update this Privacy Policy from time to time, including to reflect changes to our practices or for other operational, legal, or regulatory reasons. We will post the revised Privacy Policy on this website and update the "Last updated" date.</p>
-        </Section>
-
-        <Section title="Contact">
-          <p>Should you have any questions about our privacy practices or this Privacy Policy, or if you would like to exercise any of the rights available to you, please contact us:</p>
-          <p>
-            <strong className="text-[#f0f0f5]">Email:</strong>{' '}
-            <a href="mailto:acrformvg@gmail.com" className="text-cyan hover:underline">acrformvg@gmail.com</a>
-          </p>
-          <p><strong className="text-[#f0f0f5]">Address:</strong> Calle Faro 17, MA, 29008, ES</p>
-        </Section>
-
-      </div>
-    </div>
-  )
+const sections = {
+  en: [
+    {
+      title: 'Personal Information We Collect or Process',
+      items: [
+        'Contact details including your name, address, billing address, shipping address, phone number, and email address.',
+        'Financial information including credit card, debit card, and financial account numbers, payment card information, transaction details, form of payment, and other payment details.',
+        'Account information including your username, password, security questions, preferences and settings.',
+        'Transaction information including the items you view, put in your cart, purchase, return, exchange or cancel and your past transactions.',
+        'Communications with us including the information you include in communications with us, for example, when sending a customer support inquiry.',
+        'Device information including information about your device, browser, or network connection, your IP address, and other unique identifiers.',
+        'Usage information including information regarding your interaction with the Services.',
+      ],
+    },
+    {
+      title: 'Personal Information Sources',
+      body: 'We may collect personal information from: directly from you when you create an account or use the Services; automatically through the Services via cookies and similar technologies; from our service providers; from our partners or other third parties.',
+    },
+    {
+      title: 'How We Use Your Personal Information',
+      body: 'We use personal information to: provide and improve the Services, process payments and fulfill orders, send account notifications, arrange shipping, facilitate returns and exchanges, send marketing communications, prevent fraud, provide customer support, and comply with applicable law.',
+    },
+    {
+      title: 'How We Disclose Personal Information',
+      body: 'We may disclose your personal information to Shopify and third-party vendors performing services on our behalf, marketing partners, and in connection with legal obligations or business transactions such as a merger.',
+    },
+    {
+      title: 'Relationship with Shopify',
+      body: 'The Services are hosted by Shopify, which collects and processes personal information about your access and use of the Services. To learn more, visit the Shopify Consumer Privacy Policy at shopify.com/legal/privacy/consumers.',
+    },
+    {
+      title: 'Security and Retention',
+      body: 'We take reasonable measures to protect your personal information. How long we retain it depends on whether we need it to maintain your account, provide Services, comply with legal obligations, or resolve disputes.',
+    },
+    {
+      title: 'Your Rights and Choices',
+      body: 'Depending on where you live, you may have rights to access, delete, correct, or port your personal information; opt out of sale or targeted advertising; and manage communication preferences. If you reside in the EEA or UK, you may also have rights to object to or restrict processing and to withdraw consent.',
+    },
+    {
+      title: 'International Transfers',
+      body: 'We may transfer, store and process your personal information outside the country you live in. Transfers out of the EEA or UK will rely on recognized mechanisms like the European Commission\'s Standard Contractual Clauses.',
+    },
+    {
+      title: 'Changes to This Privacy Policy',
+      body: 'We may update this Privacy Policy from time to time. We will post the revised policy on this website and update the "Last updated" date.',
+    },
+  ],
+  es: [
+    {
+      title: 'Información Personal que Recopilamos o Procesamos',
+      items: [
+        'Datos de contacto, incluyendo nombre, dirección, dirección de facturación y envío, número de teléfono y correo electrónico.',
+        'Información financiera, incluyendo números de tarjeta de crédito o débito, datos de pago, detalles de transacciones y confirmaciones de pago.',
+        'Información de cuenta, incluyendo nombre de usuario, contraseña, preguntas de seguridad, preferencias y configuraciones.',
+        'Información de transacciones, incluyendo los artículos que visualizas, añades al carrito, compras, devuelves, cambias o cancelas, y tu historial de compras.',
+        'Comunicaciones con nosotros, incluyendo la información que incluyes en tus consultas de soporte u otros mensajes.',
+        'Información del dispositivo, incluyendo datos sobre tu dispositivo, navegador, conexión de red, dirección IP e identificadores únicos.',
+        'Información de uso, incluyendo cómo y cuándo interactúas con los Servicios.',
+      ],
+    },
+    {
+      title: 'Fuentes de Información Personal',
+      body: 'Podemos recopilar información personal directamente de ti al crear una cuenta o usar los Servicios; de forma automática a través de cookies y tecnologías similares; de nuestros proveedores de servicios; y de socios u otros terceros.',
+    },
+    {
+      title: 'Cómo Usamos tu Información Personal',
+      body: 'Usamos la información personal para: proporcionar y mejorar los Servicios, procesar pagos y gestionar pedidos, enviar notificaciones de cuenta, coordinar envíos, facilitar devoluciones e intercambios, enviar comunicaciones de marketing, prevenir fraudes, ofrecer soporte al cliente y cumplir con la legislación aplicable.',
+    },
+    {
+      title: 'Cómo Compartimos tu Información Personal',
+      body: 'Podemos compartir tu información personal con Shopify y proveedores de servicios que actúan en nuestro nombre, socios de marketing, y en el contexto de obligaciones legales o transacciones comerciales como una fusión.',
+    },
+    {
+      title: 'Relación con Shopify',
+      body: 'Los Servicios están alojados por Shopify, que recopila y procesa información personal sobre tu acceso y uso de los Servicios. Para más información, visita la Política de Privacidad de Shopify en shopify.com/legal/privacy/consumers.',
+    },
+    {
+      title: 'Seguridad y Retención',
+      body: 'Adoptamos medidas razonables para proteger tu información personal. El tiempo de retención depende de si necesitamos la información para mantener tu cuenta, proporcionar los Servicios, cumplir con obligaciones legales o resolver disputas.',
+    },
+    {
+      title: 'Tus Derechos y Opciones',
+      body: 'Según dónde residas, puedes tener derechos de acceso, eliminación, corrección o portabilidad de tu información personal; derecho a oponerte a la venta o publicidad segmentada; y a gestionar tus preferencias de comunicación. Si resides en el EEE o el Reino Unido, también puedes oponerte al procesamiento, restringirlo y retirar tu consentimiento.',
+    },
+    {
+      title: 'Transferencias Internacionales',
+      body: 'Podemos transferir, almacenar y procesar tu información personal fuera del país donde resides. Las transferencias fuera del EEE o del Reino Unido se realizarán mediante mecanismos reconocidos, como las Cláusulas Contractuales Estándar de la Comisión Europea.',
+    },
+    {
+      title: 'Cambios en esta Política de Privacidad',
+      body: 'Podemos actualizar esta Política de Privacidad periódicamente. Publicaremos la versión revisada en este sitio web y actualizaremos la fecha de "Última actualización".',
+    },
+  ],
 }
 
-function Section({ title, children }: { title: string; children: React.ReactNode }) {
+const ui = {
+  en: {
+    title: 'Privacy Policy',
+    updated: 'Last updated: June 10, 2026',
+    intro: 'VoidPad operates this store and website to provide you with a curated shopping experience (the "Services"). This Privacy Policy describes how we collect, use, and disclose your personal information when you visit, use, or make a purchase using the Services. By using and accessing any of the Services, you acknowledge that you have read and understand this Privacy Policy.',
+    contactTitle: 'Contact',
+    contactBody: 'For questions about our privacy practices or to exercise your rights, please contact us:',
+    emailLabel: 'Email',
+    addressLabel: 'Address',
+  },
+  es: {
+    title: 'Política de Privacidad',
+    updated: 'Última actualización: 10 de junio de 2026',
+    intro: 'VoidPad opera esta tienda y sitio web para ofrecerte una experiencia de compra personalizada (los "Servicios"). Esta Política de Privacidad describe cómo recopilamos, usamos y divulgamos tu información personal cuando visitas, utilizas o realizas una compra a través de los Servicios. Al usar y acceder a cualquiera de los Servicios, reconoces haber leído y comprendido esta Política de Privacidad.',
+    contactTitle: 'Contacto',
+    contactBody: 'Para preguntas sobre nuestras prácticas de privacidad o para ejercer tus derechos, contáctanos:',
+    emailLabel: 'Correo electrónico',
+    addressLabel: 'Dirección',
+  },
+}
+
+export default function PrivacyPage() {
+  const locale = useLanguageStore((s) => s.locale)
+  const t = ui[locale]
+  const secs = sections[locale]
+
   return (
-    <div className="space-y-3">
-      <h2 className="text-lg font-bold text-[#f0f0f5] border-b border-[#1e1e2e] pb-2">{title}</h2>
-      <div className="space-y-3 [&_ul]:list-disc [&_ul]:pl-5 [&_ul]:space-y-1.5 [&_li]:text-[#c0c0d0]">
-        {children}
+    <div className="max-w-3xl mx-auto px-4 sm:px-6 py-16">
+      <h1 className="text-3xl font-black text-[#f0f0f5] mb-2">{t.title}</h1>
+      <p className="text-sm text-[#8888a0] mb-10">{t.updated}</p>
+
+      <div className="space-y-8 text-sm text-[#c0c0d0] leading-relaxed">
+        <p>{t.intro}</p>
+
+        {secs.map((sec) => (
+          <div key={sec.title} className="space-y-3">
+            <h2 className="text-base font-bold text-[#f0f0f5] border-b border-[#1e1e2e] pb-2">{sec.title}</h2>
+            {'items' in sec && sec.items ? (
+              <ul className="list-disc pl-5 space-y-1.5">
+                {sec.items.map((item) => <li key={item}>{item}</li>)}
+              </ul>
+            ) : (
+              <p>{'body' in sec ? sec.body : ''}</p>
+            )}
+          </div>
+        ))}
+
+        <div className="space-y-3">
+          <h2 className="text-base font-bold text-[#f0f0f5] border-b border-[#1e1e2e] pb-2">{t.contactTitle}</h2>
+          <p>{t.contactBody}</p>
+          <p><strong className="text-[#f0f0f5]">{t.emailLabel}:</strong>{' '}
+            <a href="mailto:acrformvg@gmail.com" className="text-cyan hover:underline">acrformvg@gmail.com</a>
+          </p>
+          <p><strong className="text-[#f0f0f5]">{t.addressLabel}:</strong> Calle Faro 17, MA, 29008, Spain</p>
+        </div>
       </div>
     </div>
   )

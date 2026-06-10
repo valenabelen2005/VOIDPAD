@@ -88,6 +88,11 @@ export const translations = {
     'drawer.taxNote': 'Shipping and taxes calculated at checkout.',
     'drawer.checkout': 'Checkout',
 
+    // Collection descriptions
+    'collection.void-classics.desc': 'The essentials, without compromise. Pure color backgrounds with a name that says it all. For those who know that minimalism isn\'t a lack of character; it\'s the highest form of it. One surface, one color, zero distractions.',
+    'collection.void-series.desc': 'Where geometry becomes identity. Each design was born from hours in front of a screen; from trading charts, lines of code, circuit diagrams. A true limited edition. When a design is gone, it\'s gone for good. If you see it, it\'s yours.',
+    'collection.void-art.desc': 'Where the setup becomes a canvas. Bold prints, raw aesthetics, designs that refuse to go unnoticed. If you want your desk to say something, this is where it starts.',
+
     // Trending page
     'trending.badge': 'Best Sellers',
     'trending.title': 'Trending Now',
@@ -190,6 +195,11 @@ export const translations = {
     'drawer.subtotal': 'Subtotal',
     'drawer.taxNote': 'Gastos de envío e impuestos calculados al finalizar la compra.',
     'drawer.checkout': 'Finalizar compra',
+
+    // Collection descriptions
+    'collection.void-classics.desc': 'Lo esencial, sin concesiones. Fondos de color puro con un nombre que lo dice todo. Para quienes saben que el minimalismo no es falta de carácter; es su forma más elevada. Una superficie, un color, cero distracciones.',
+    'collection.void-series.desc': 'Donde la geometría se convierte en identidad. Cada diseño nació de horas frente a una pantalla; de gráficos de trading, líneas de código, diagramas de circuitos. Una edición verdaderamente limitada. Cuando un diseño se agota, desaparece para siempre. Si lo ves, es tuyo.',
+    'collection.void-art.desc': 'Donde el setup se convierte en lienzo. Estampados atrevidos, estética raw, diseños que no pasan desapercibidos. Si querés que tu escritorio diga algo, acá empieza todo.',
 
     // Trending page
     'trending.badge': 'Más Vendidos',
