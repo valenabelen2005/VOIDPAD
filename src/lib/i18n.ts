@@ -88,6 +88,11 @@ export const translations = {
     'drawer.taxNote': 'Shipping and taxes calculated at checkout.',
     'drawer.checkout': 'Checkout',
 
+    // Trending page
+    'trending.badge': 'Best Sellers',
+    'trending.title': 'Trending Now',
+    'trending.subtitle': 'The desk pads our community loves most — sorted by popularity.',
+
     // Products page
     'products.title': 'All Products',
     'products.subtitle': 'Premium desk pads & mouse pads',
@@ -185,6 +190,11 @@ export const translations = {
     'drawer.subtotal': 'Subtotal',
     'drawer.taxNote': 'Gastos de envío e impuestos calculados al finalizar la compra.',
     'drawer.checkout': 'Finalizar compra',
+
+    // Trending page
+    'trending.badge': 'Más Vendidos',
+    'trending.title': 'Tendencias',
+    'trending.subtitle': 'Los desk pads que más ama nuestra comunidad — ordenados por popularidad.',
 
     // Products page
     'products.title': 'Todos los productos',

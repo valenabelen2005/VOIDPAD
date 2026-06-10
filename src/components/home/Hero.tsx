@@ -42,7 +42,7 @@ export function Hero() {
               <ArrowRight size={16} />
             </Button>
           </Link>
-          <Link href="/collections/trending">
+          <Link href="/trending">
             <Button size="lg" variant="outline">
               {t('hero.cta2')}
             </Button>
