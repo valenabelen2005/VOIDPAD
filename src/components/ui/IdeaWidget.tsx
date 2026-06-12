@@ -52,6 +52,7 @@ export function IdeaWidget() {
   const [name, setName] = useState('')
   const [email, setEmail] = useState('')
   const [idea, setIdea] = useState('')
+  const [honey, setHoney] = useState('')
   const [status, setStatus] = useState<'idle' | 'loading' | 'success' | 'error'>('idle')
   const [copied, setCopied] = useState(false)
   const emailRef = useRef<HTMLInputElement>(null)
@@ -67,6 +68,7 @@ export function IdeaWidget() {
       setName('')
       setEmail('')
       setIdea('')
+      setHoney('')
       setStatus('idle')
     }
   }
@@ -75,7 +77,7 @@ export function IdeaWidget() {
     e.preventDefault()
     if (!email || !idea) return
     setStatus('loading')
-    const result = await submitIdeaForm({ name, email, idea })
+    const result = await submitIdeaForm({ name, email, idea, _honey: honey })
     setStatus(result.ok ? 'success' : 'error')
   }
 
@@ -90,7 +92,7 @@ export function IdeaWidget() {
       {/* Floating trigger */}
       <button
         onClick={openModal}
-        className="fixed bottom-6 left-6 z-40 flex items-center gap-2 bg-[#111118] border border-cyan/30 text-cyan text-xs font-semibold px-4 py-2.5 rounded-full shadow-lg shadow-cyan/10 hover:bg-[#1a1a28] hover:border-cyan/60 transition-all duration-200"
+        className="fixed bottom-6 left-6 z-40 flex items-center gap-2 bg-surface border border-cyan/30 text-cyan text-xs font-semibold px-4 py-2.5 rounded-full shadow-lg shadow-cyan/10 hover:bg-[#1a1a28] hover:border-cyan/60 transition-all duration-200"
         aria-label="Share pad idea"
       >
         <span className="relative flex h-2 w-2">
@@ -109,16 +111,16 @@ export function IdeaWidget() {
           className="fixed inset-0 z-50 flex items-end sm:items-end justify-start p-4 sm:p-6"
           onClick={(e) => e.target === e.currentTarget && closeModal()}
         >
-          <div className="bg-[#0d0d14] border border-[#1e1e2e] rounded-2xl shadow-2xl w-full max-w-sm">
+          <div className="bg-[#0d0d14] border border-border rounded-2xl shadow-2xl w-full max-w-sm">
             {/* Header */}
-            <div className="flex items-start justify-between p-5 border-b border-[#1e1e2e]">
+            <div className="flex items-start justify-between p-5 border-b border-border">
               <div>
-                <h2 className="text-sm font-bold text-[#f0f0f5]">{t.title}</h2>
-                <p className="text-xs text-[#8888a0] mt-0.5">{t.subtitle}</p>
+                <h2 className="text-sm font-bold text-text">{t.title}</h2>
+                <p className="text-xs text-muted mt-0.5">{t.subtitle}</p>
               </div>
               <button
                 onClick={closeModal}
-                className="text-[#8888a0] hover:text-[#f0f0f5] transition-colors ml-3 mt-0.5"
+                className="text-muted hover:text-text transition-colors ml-3 mt-0.5"
               >
                 <X size={16} />
               </button>
@@ -132,36 +134,48 @@ export function IdeaWidget() {
                     <Check size={22} />
                   </div>
                   <div>
-                    <p className="text-sm font-semibold text-[#f0f0f5] mb-3">{t.successTitle}</p>
-                    <div className="flex items-center gap-2 bg-[#111118] border border-cyan/30 rounded-xl px-4 py-3">
+                    <p className="text-sm font-semibold text-text mb-3">{t.successTitle}</p>
+                    <div className="flex items-center gap-2 bg-surface border border-cyan/30 rounded-xl px-4 py-3">
                       <span className="font-mono font-bold text-cyan tracking-widest text-base flex-1">
                         {DISCOUNT_CODE}
                       </span>
                       <button
                         onClick={copyCode}
-                        className="text-[#8888a0] hover:text-cyan transition-colors"
+                        className="text-muted hover:text-cyan transition-colors"
                         aria-label="Copy code"
                       >
                         {copied ? <Check size={15} className="text-cyan" /> : <Copy size={15} />}
                       </button>
                     </div>
-                    <p className="text-xs text-[#8888a0] mt-2">{t.successNote}</p>
+                    <p className="text-xs text-muted mt-2">{t.successNote}</p>
                   </div>
                   <button
                     onClick={closeModal}
-                    className="w-full text-xs text-[#8888a0] hover:text-[#f0f0f5] transition-colors py-1"
+                    className="w-full text-xs text-muted hover:text-text transition-colors py-1"
                   >
                     {t.close}
                   </button>
                 </div>
               ) : (
                 <form onSubmit={handleSubmit} className="space-y-3">
+                  {/* Honeypot: hidden from real users, bots fill it in */}
+                  <input
+                    type="text"
+                    name="website"
+                    value={honey}
+                    onChange={(e) => setHoney(e.target.value)}
+                    tabIndex={-1}
+                    autoComplete="off"
+                    aria-hidden="true"
+                    className="absolute opacity-0 pointer-events-none w-0 h-0"
+                  />
                   <input
                     type="text"
                     value={name}
                     onChange={(e) => setName(e.target.value)}
                     placeholder={t.namePlaceholder}
-                    className="w-full bg-[#111118] border border-[#1e1e2e] rounded-xl px-3.5 py-2.5 text-sm text-[#f0f0f5] placeholder:text-[#8888a0] focus:outline-none focus:border-cyan/50 transition-colors"
+                    maxLength={100}
+                    className="w-full bg-surface border border-border rounded-xl px-3.5 py-2.5 text-sm text-text placeholder:text-muted focus:outline-none focus:border-cyan/50 transition-colors"
                   />
                   <input
                     ref={emailRef}
@@ -170,17 +184,19 @@ export function IdeaWidget() {
                     onChange={(e) => setEmail(e.target.value)}
                     placeholder={t.emailPlaceholder}
                     required
-                    className="w-full bg-[#111118] border border-[#1e1e2e] rounded-xl px-3.5 py-2.5 text-sm text-[#f0f0f5] placeholder:text-[#8888a0] focus:outline-none focus:border-cyan/50 transition-colors"
+                    maxLength={200}
+                    className="w-full bg-surface border border-border rounded-xl px-3.5 py-2.5 text-sm text-text placeholder:text-muted focus:outline-none focus:border-cyan/50 transition-colors"
                   />
                   <div>
-                    <label className="text-xs text-[#8888a0] mb-1.5 block">{t.ideaLabel}</label>
+                    <label className="text-xs text-muted mb-1.5 block">{t.ideaLabel}</label>
                     <textarea
                       value={idea}
                       onChange={(e) => setIdea(e.target.value)}
                       placeholder={t.ideaPlaceholder}
                       required
                       rows={3}
-                      className="w-full bg-[#111118] border border-[#1e1e2e] rounded-xl px-3.5 py-2.5 text-sm text-[#f0f0f5] placeholder:text-[#8888a0] focus:outline-none focus:border-cyan/50 transition-colors resize-none"
+                      maxLength={2000}
+                      className="w-full bg-surface border border-border rounded-xl px-3.5 py-2.5 text-sm text-text placeholder:text-muted focus:outline-none focus:border-cyan/50 transition-colors resize-none"
                     />
                   </div>
 

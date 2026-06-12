@@ -154,7 +154,7 @@ export const translations = {
     'why.2.title': 'Hecho para durar',
     'why.2.body': 'Base de goma 3mm, bordes cosidos, lavable a máquina. No hecho para reemplazar.',
     'why.3.title': 'Ediciones limitadas',
-    'why.3.body': 'Los diseños de Void Series se retiran. Cuando se van, se van para siempre.',
+    'why.3.body': 'Los diseños se retiran. Cuando se van, se van para siempre.',
     'why.4.title': 'Tu arte, tus reglas',
     'why.4.body': 'Mandanos tu diseño y lo imprimimos. Sin pedido mínimo.',
 

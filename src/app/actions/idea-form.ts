@@ -7,9 +7,22 @@ export async function submitIdeaForm(data: {
   name: string
   email: string
   idea: string
+  _honey?: string
 }): Promise<{ ok: boolean; error?: string }> {
+  // honeypot: bots fill hidden fields, humans don't
+  if (data._honey) return { ok: true }
+
   if (!data.email || !data.idea) {
     return { ok: false, error: 'Missing fields' }
+  }
+
+  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
+  if (!emailRegex.test(data.email)) {
+    return { ok: false, error: 'Invalid email' }
+  }
+
+  if (data.email.length > 200 || data.name.length > 100 || data.idea.length > 2000) {
+    return { ok: false, error: 'Input too long' }
   }
 
   try {
