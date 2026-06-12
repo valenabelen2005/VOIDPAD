@@ -11,7 +11,7 @@ export const translations = {
 
     // AnnouncementBar
     'announce.1': 'Every pad is printed on demand — designed to last, not to be replaced.',
-    'announce.2': 'Void Series drops are limited. When a design sells out, it\'s gone for good.',
+    'announce.2': 'All drops are limited. When a design sells out, it\'s gone for good.',
 
     // Hero
     'hero.badge': 'Handcrafted for setups that mean something.',
@@ -35,7 +35,7 @@ export const translations = {
     'why.2.title': 'Built to last',
     'why.2.body': '3mm rubber base, stitched edges, machine washable. Not built to replace.',
     'why.3.title': 'Limited runs',
-    'why.3.body': 'Void Series designs retire. Once they\'re gone, they\'re gone.',
+    'why.3.body': 'All designs retire. Once they\'re gone, they\'re gone.',
     'why.4.title': 'Your art, your rules',
     'why.4.body': 'Send us your design and we\'ll print it. No minimums.',
 
@@ -130,7 +130,7 @@ export const translations = {
 
     // AnnouncementBar
     'announce.1': 'Cada pad se imprime al pedirlo — pensado para durar, no para reemplazarse.',
-    'announce.2': 'Los drops de Void Series son limitados. Cuando un diseño se agota, desaparece para siempre.',
+    'announce.2': 'Los drops son limitados. Cuando un diseño se agota, desaparece para siempre.',
 
     // Hero
     'hero.badge': 'Para setups que dicen algo.',
