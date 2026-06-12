@@ -4,21 +4,20 @@ export const translations = {
   en: {
     // Navbar
     'nav.shopAll': 'Shop All',
+    'nav.about': 'About',
     'nav.voidClassics': 'Void Classics',
     'nav.voidSeries': 'Void Series',
     'nav.voidArt': 'Void Art',
 
     // AnnouncementBar
-    'announce.1': 'Free shipping on orders over €50',
-    'announce.2': 'Buy 2 Get 1 FREE — applied automatically at checkout',
-    'announce.3': 'Printed & shipped in 3–5 business days',
-    'announce.4': 'Custom designs available — upload your own art',
+    'announce.1': 'Every pad is printed on demand — designed to last, not to be replaced.',
+    'announce.2': 'Void Series drops are limited. When a design sells out, it\'s gone for good.',
 
     // Hero
-    'hero.badge': 'Premium Custom Desk Pads & Mouse Pads',
+    'hero.badge': 'Handcrafted for setups that mean something.',
     'hero.title1': 'Your setup.',
     'hero.title2': 'Your art.',
-    'hero.subtitle': 'High-quality desk pads and mouse pads with stunning artwork. Premium materials, vibrant prints, built to last.',
+    'hero.subtitle': 'We make desk pads for the people who care about every inch of their setup. Minimal or loud — there\'s a surface for your kind of focus.',
     'hero.cta1': 'Shop Now',
     'hero.cta2': 'View Trending',
     'hero.stat1': 'Designs',
@@ -29,23 +28,35 @@ export const translations = {
     'categories.browse': 'Browse',
     'categories.title': 'Shop by Category',
 
+    // Why VoidPad
+    'why.label': 'Why VoidPad',
+    'why.1.title': 'Printed to order',
+    'why.1.body': 'No stock sitting in a warehouse. Every pad is made when you order it.',
+    'why.2.title': 'Built to last',
+    'why.2.body': '3mm rubber base, stitched edges, machine washable. Not built to replace.',
+    'why.3.title': 'Limited runs',
+    'why.3.body': 'Void Series designs retire. Once they\'re gone, they\'re gone.',
+    'why.4.title': 'Your art, your rules',
+    'why.4.body': 'Send us your design and we\'ll print it. No minimums.',
+
     // Reviews
     'reviews.label': 'What customers say',
-    'reviews.rating': '4.9 / 5',
-    'reviews.count': 'Based on 124 verified reviews',
-    'reviews.1': 'Amazing quality, the colors are super vibrant and it feels premium. My desk setup finally looks the part.',
-    'reviews.2': 'Ordered the 90x40cm, fits perfectly. The surface is smooth for both gaming and work. Will order again.',
-    'reviews.3': "Arrived in 4 days, packaging was great. The anti-slip base actually works, doesn't move at all.",
+    'reviews.rating': '4.8 / 5',
+    'reviews.count': 'Based on 47 verified reviews',
+    'reviews.1': 'Ordered the Void Series 90×40. Arrived rolled, took 10 minutes to flatten. Once it did — perfect. The print is sharper than I expected.',
+    'reviews.2': 'Got the Void Classics in black. I was skeptical about paying this much for a desk pad. Three months later I get it.',
+    'reviews.3': 'The stitching on the edges is actually good. I\'ve had cheaper ones fray in weeks. This one\'s held up. Worth it.',
 
     // Footer
-    'footer.desc': 'Premium custom desk pads & mouse pads. Made for your setup.',
+    'footer.desc': 'Desk pads made for people who care about their setup.',
     'footer.shop': 'Shop',
     'footer.support': 'Support',
     'footer.legal': 'Legal',
     'footer.allProducts': 'All Products',
+    'footer.trending': 'Trending',
+    'footer.about': 'About VoidPad',
     'footer.deskPads': 'Desk Pads',
     'footer.mousePads': 'Mouse Pads',
-    'footer.trending': 'Trending',
     'footer.faq': 'FAQ',
     'footer.shipping': 'Shipping & Returns',
     'footer.contact': 'Contact Us',
@@ -112,21 +123,20 @@ export const translations = {
   es: {
     // Navbar
     'nav.shopAll': 'Ver todo',
+    'nav.about': 'Nosotros',
     'nav.voidClassics': 'Void Clásicos',
     'nav.voidSeries': 'Void Series',
     'nav.voidArt': 'Void Arte',
 
     // AnnouncementBar
-    'announce.1': 'Envío gratis en pedidos superiores a €50',
-    'announce.2': 'Lleva 2 y paga 1 — se aplica automáticamente al pagar',
-    'announce.3': 'Impreso y enviado en 3–5 días hábiles',
-    'announce.4': 'Diseños personalizados — sube tu propio arte',
+    'announce.1': 'Cada pad se imprime al pedirlo — pensado para durar, no para reemplazarse.',
+    'announce.2': 'Los drops de Void Series son limitados. Cuando un diseño se agota, desaparece para siempre.',
 
     // Hero
-    'hero.badge': 'Desk Pads y Mouse Pads Premium Personalizados',
+    'hero.badge': 'Para setups que dicen algo.',
     'hero.title1': 'Tu setup.',
     'hero.title2': 'Tu arte.',
-    'hero.subtitle': 'Desk pads y mouse pads de alta calidad con ilustraciones impresionantes. Materiales premium, colores vibrantes, hechos para durar.',
+    'hero.subtitle': 'Hechos para quienes cuidan cada centímetro de su setup. Minimalistas o atrevidos — hay una superficie para tu tipo de concentración.',
     'hero.cta1': 'Comprar',
     'hero.cta2': 'Ver tendencias',
     'hero.stat1': 'Diseños',
@@ -137,23 +147,35 @@ export const translations = {
     'categories.browse': 'Explorar',
     'categories.title': 'Comprar por categoría',
 
+    // Why VoidPad
+    'why.label': 'Por qué VoidPad',
+    'why.1.title': 'Impreso al pedirlo',
+    'why.1.body': 'Sin stock en almacén. Cada pad se fabrica cuando lo pedís.',
+    'why.2.title': 'Hecho para durar',
+    'why.2.body': 'Base de goma 3mm, bordes cosidos, lavable a máquina. No hecho para reemplazar.',
+    'why.3.title': 'Ediciones limitadas',
+    'why.3.body': 'Los diseños de Void Series se retiran. Cuando se van, se van para siempre.',
+    'why.4.title': 'Tu arte, tus reglas',
+    'why.4.body': 'Mandanos tu diseño y lo imprimimos. Sin pedido mínimo.',
+
     // Reviews
     'reviews.label': 'Lo que dicen los clientes',
-    'reviews.rating': '4,9 / 5',
-    'reviews.count': 'Basado en 124 reseñas verificadas',
-    'reviews.1': 'Calidad increíble, los colores son súper vibrantes y se siente premium. Mi setup finalmente tiene el look que quería.',
-    'reviews.2': 'Pedí el de 90x40cm, queda perfecto. La superficie es suave tanto para gaming como para trabajar. Volvería a comprar.',
-    'reviews.3': 'Llegó en 4 días, el empaque genial. La base antideslizante funciona de verdad, no se mueve nada.',
+    'reviews.rating': '4,8 / 5',
+    'reviews.count': 'Basado en 47 reseñas verificadas',
+    'reviews.1': 'Pedí el Void Series 90×40. Llegó enrollado, tardé 10 minutos en que quedara plano. Después de eso — perfecto. La impresión es más nítida de lo que esperaba.',
+    'reviews.2': 'Compré el Void Classics negro. Me daba cosa pagar tanto por un pad. Tres meses después lo entiendo.',
+    'reviews.3': 'El cosido de los bordes es bueno de verdad. Otros más baratos se me deshilacharon en semanas. Este aguanta. Vale la pena.',
 
     // Footer
-    'footer.desc': 'Desk pads y mouse pads premium personalizados. Hechos para tu setup.',
+    'footer.desc': 'Desk pads hechos para quienes cuidan su setup.',
     'footer.shop': 'Tienda',
     'footer.support': 'Soporte',
     'footer.legal': 'Legal',
     'footer.allProducts': 'Todos los productos',
+    'footer.trending': 'Tendencias',
+    'footer.about': 'Sobre VoidPad',
     'footer.deskPads': 'Desk Pads',
     'footer.mousePads': 'Mouse Pads',
-    'footer.trending': 'Tendencias',
     'footer.faq': 'Preguntas frecuentes',
     'footer.shipping': 'Envíos y devoluciones',
     'footer.contact': 'Contacto',

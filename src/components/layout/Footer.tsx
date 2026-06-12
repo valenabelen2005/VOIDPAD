@@ -9,6 +9,7 @@ export function Footer() {
     [t('footer.shop')]: [
       { href: '/products', label: t('footer.allProducts') },
       { href: '/trending', label: t('footer.trending') },
+      { href: '/about', label: t('footer.about') },
       { href: '/collections/void-classics', label: 'Void Classics' },
       { href: '/collections/void-series', label: 'Void Series' },
       { href: '/collections/void-art', label: 'Void Art' },

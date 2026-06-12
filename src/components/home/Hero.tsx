@@ -1,7 +1,7 @@
 'use client'
 import Link from 'next/link'
 import { Button } from '@/components/ui/Button'
-import { ArrowRight, Sparkles } from 'lucide-react'
+import { ArrowRight } from 'lucide-react'
 import { useT } from '@/hooks/useT'
 
 export function Hero() {
@@ -19,8 +19,7 @@ export function Hero() {
       </div>
 
       <div className="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 text-center">
-        <div className="inline-flex items-center gap-2 bg-violet/15 border border-violet/30 text-violet/80 text-xs font-medium px-3.5 py-1.5 rounded-full mb-8">
-          <Sparkles size={12} />
+        <div className="inline-flex items-center bg-violet/15 border border-violet/30 text-violet/80 text-xs font-medium px-3.5 py-1.5 rounded-full mb-8">
           {t('hero.badge')}
         </div>
 

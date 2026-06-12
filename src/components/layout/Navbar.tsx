@@ -18,6 +18,7 @@ export function Navbar() {
     { href: '/collections/void-classics', label: 'Void Classics' },
     { href: '/collections/void-series', label: 'Void Series' },
     { href: '/collections/void-art', label: 'Void Art' },
+    { href: '/about', label: t('nav.about') },
   ]
 
   return (
