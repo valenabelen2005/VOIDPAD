@@ -8,8 +8,6 @@ import { CartDrawer } from '@/components/cart/CartDrawer'
 import { StarField } from '@/components/ui/StarField'
 import { CursorGlow } from '@/components/ui/CursorGlow'
 import { IdeaWidget } from '@/components/ui/IdeaWidget'
-import { PwaInstallBanner } from '@/components/ui/PwaInstallBanner'
-import { PwaWelcomeModal } from '@/components/ui/PwaWelcomeModal'
 import { ServiceWorkerRegistration } from '@/components/ui/ServiceWorkerRegistration'
 
 const geistSans = Geist({ variable: '--font-geist-sans', subsets: ['latin'] })
@@ -50,8 +48,6 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <Footer />
         <CartDrawer />
         <IdeaWidget />
-        <PwaInstallBanner />
-        <PwaWelcomeModal />
       </body>
     </html>
   )
