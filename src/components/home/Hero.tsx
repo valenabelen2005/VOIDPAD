@@ -8,7 +8,7 @@ export function Hero() {
   const t = useT()
 
   return (
-    <section className="relative min-h-[60vh] flex items-center justify-center overflow-hidden">
+    <section className="relative min-h-[50vh] flex items-center justify-center overflow-hidden">
       <div className="absolute inset-0 bg-background">
         <div className="absolute top-0 left-1/2 -translate-x-1/2 w-200 h-150 bg-violet/20 rounded-full blur-[120px]" />
         <div className="absolute bottom-0 right-1/4 w-125 h-100 bg-cyan/10 rounded-full blur-[100px]" />

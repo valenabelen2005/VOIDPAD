@@ -9,7 +9,7 @@ export async function CategoryGrid() {
   if (!collections.length) return null
 
   return (
-    <section className="max-w-7xl mx-auto px-4 sm:px-6 py-12">
+    <section className="max-w-7xl mx-auto px-4 sm:px-6 py-6">
       <div className="mb-8 text-center">
         {/* <p className="text-xs font-semibold text-[#7c3aed] uppercase tracking-widest mb-1">Browse</p> */}
         <CategoryGridTitle />
