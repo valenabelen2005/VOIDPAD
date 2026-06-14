@@ -109,6 +109,15 @@ export const translations = {
     'collection.void-classics.desc': 'The essentials, without compromise. Pure color backgrounds with a name that says it all. For those who know that minimalism isn\'t a lack of character; it\'s the highest form of it. One surface, one color, zero distractions.',
     'collection.void-series.desc': 'Where geometry becomes identity. Each design was born from hours in front of a screen; from trading charts, lines of code, circuit diagrams. A true limited edition. When a design is gone, it\'s gone for good. If you see it, it\'s yours.',
     'collection.void-art.desc': 'Where the setup becomes a canvas. Bold prints, raw aesthetics, designs that refuse to go unnoticed. If you want your desk to say something, this is where it starts.',
+    'collection.gaming-collection.desc': 'Inspired by the worlds that kept us playing until dawn. Epic moments, adventure and legendary challenges.',
+    'collection.velocity-series.desc': 'Speed turned into design. Supercars, aviation and machines built to break limits.',
+    'collection.community-collection.desc': 'Designs chosen by the VOIDPAD community. Real ideas turned into one-of-a-kind pieces.',
+    'collection.artist-collection.desc': 'Creativity without rules. Original artworks for setups that want to stand out.',
+    'collection.pattern-collection.desc': 'Lines, shapes and textures that turn simplicity into personality.',
+    'collection.landscape-collection.desc': 'From frozen mountains to endless horizons. Bring nature to your desk.',
+    'collection.anime-collection.desc': 'The characters and universes that defined generations, brought to your favorite setup.',
+    'collection.cinema-collection.desc': 'Unforgettable scenes and iconic worlds inspired by the magic of cinema.',
+    'collection.japanese-collection.desc': 'Japan\'s elegance reinterpreted for modern spaces: tradition, culture and style.',
 
     // Trending page
     'trending.badge': 'Best Sellers',
@@ -234,6 +243,15 @@ export const translations = {
     'collection.void-classics.desc': 'Lo esencial, sin concesiones. Fondos de color puro con un nombre que lo dice todo. Para quienes saben que el minimalismo no es falta de carácter; es su forma más elevada. Una superficie, un color, cero distracciones.',
     'collection.void-series.desc': 'Donde la geometría se convierte en identidad. Cada diseño nació de horas frente a una pantalla; de gráficos de trading, líneas de código, diagramas de circuitos. Una edición verdaderamente limitada. Cuando un diseño se agota, desaparece para siempre. Si lo ves, es tuyo.',
     'collection.void-art.desc': 'Donde el setup se convierte en lienzo. Estampados atrevidos, estética raw, diseños que no pasan desapercibidos. Si querés que tu escritorio diga algo, acá empieza todo.',
+    'collection.gaming-collection.desc': 'Inspirado en los mundos que nos hicieron jugar hasta el amanecer. Épica, aventura y desafíos legendarios.',
+    'collection.velocity-series.desc': 'La velocidad hecha diseño. Superdeportivos, aviación y máquinas creadas para superar límites.',
+    'collection.community-collection.desc': 'Diseños elegidos por la comunidad de VOIDPAD. Ideas reales convertidas en piezas únicas.',
+    'collection.artist-collection.desc': 'Creatividad sin reglas. Obras originales para setups que buscan destacar.',
+    'collection.pattern-collection.desc': 'Líneas, formas y texturas que transforman la simplicidad en personalidad.',
+    'collection.landscape-collection.desc': 'Desde montañas heladas hasta horizontes infinitos. Lleva la naturaleza a tu escritorio.',
+    'collection.anime-collection.desc': 'Los personajes y universos que marcaron generaciones, llevados a tu setup favorito.',
+    'collection.cinema-collection.desc': 'Escenas inolvidables y mundos icónicos inspirados en la magia del cine.',
+    'collection.japanese-collection.desc': 'La elegancia de Japón reinterpretada para espacios modernos: tradición, cultura y estilo.',
 
     // Trending page
     'trending.badge': 'Más Vendidos',
