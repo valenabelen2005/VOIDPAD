@@ -45,7 +45,7 @@ export function Navbar({ collections = [] }: { collections?: Collection[] }) {
 
         {/* Logo */}
         <Link href="/" className="flex items-center gap-2 shrink-0">
-          <Image src="/logo.png" alt="VoidPad" width={36} height={36} className="object-contain" />
+          <Image src="/logo.png" alt="VoidPad" width={36} height={36} className="object-contain" unoptimized />
           <span className="font-bold text-lg tracking-tight text-text">VoidPad</span>
         </Link>
 

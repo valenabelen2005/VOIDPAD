@@ -31,7 +31,7 @@ export function Footer() {
           {/* Brand */}
           <div className="col-span-2 md:col-span-1">
             <div className="flex items-center gap-2 mb-3">
-              <Image src="/logo.png" alt="VoidPad" width={32} height={32} className="object-contain" />
+              <Image src="/logo.png" alt="VoidPad" width={32} height={32} className="object-contain" unoptimized />
               <span className="font-bold text-[#f0f0f5]">VoidPad</span>
             </div>
             <p className="text-sm text-[#8888a0] leading-relaxed">{t('footer.desc')}</p>
