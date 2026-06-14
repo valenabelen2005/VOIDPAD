@@ -14,7 +14,7 @@ export const translations = {
     'announce.2': 'All drops are limited. When a design sells out, it\'s gone for good.',
 
     // Hero
-    'hero.badge': 'Handcrafted for setups that mean something.',
+    // 'hero.badge': 'Handcrafted for setups that mean something.',
     'hero.title1': 'Your setup.',
     'hero.title2': 'Your art.',
     'hero.subtitle': 'We make desk pads for the people who care about every inch of their setup. Minimal or loud — there\'s a surface for your kind of focus.',
