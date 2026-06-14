@@ -2,7 +2,7 @@ import type { Metadata, Viewport } from 'next'
 import { Geist, Geist_Mono } from 'next/font/google'
 import './globals.css'
 import { AnnouncementBar } from '@/components/layout/AnnouncementBar'
-import { Navbar } from '@/components/layout/Navbar'
+import { NavbarWrapper } from '@/components/layout/NavbarWrapper'
 import { Footer } from '@/components/layout/Footer'
 import { CartDrawer } from '@/components/cart/CartDrawer'
 import { StarField } from '@/components/ui/StarField'
@@ -43,7 +43,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <StarField />
         <CursorGlow />
         <AnnouncementBar />
-        <Navbar />
+        <NavbarWrapper />
         <main className="flex-1">{children}</main>
         <Footer />
         <CartDrawer />

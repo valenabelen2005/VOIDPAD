@@ -3,9 +3,14 @@ export type Locale = 'en' | 'es'
 export const translations = {
   en: {
     // Navbar
-    'nav.shopAll': 'Shop All',
+    'nav.shopAll': 'Pads',
     'nav.about': 'About',
     'nav.fanMade': 'Fan Made',
+    'nav.browse': 'Browse',
+    'nav.new': 'New',
+    'nav.featured': 'Featured',
+    'nav.bestSelling': 'Best Selling',
+    'nav.collections': 'Collections',
     'nav.voidClassics': 'Void Classics',
     'nav.voidSeries': 'Void Series',
     'nav.voidArt': 'Void Art',
@@ -123,9 +128,14 @@ export const translations = {
   },
   es: {
     // Navbar
-    'nav.shopAll': 'Ver todo',
+    'nav.shopAll': 'Pads',
     'nav.about': 'Nosotros',
     'nav.fanMade': 'Hecho por los fans',
+    'nav.browse': 'Explorar',
+    'nav.new': 'Nuevos',
+    'nav.featured': 'Destacados',
+    'nav.bestSelling': 'Más vendidos',
+    'nav.collections': 'Colecciones',
     'nav.voidClassics': 'Void Clásicos',
     'nav.voidSeries': 'Void Series',
     'nav.voidArt': 'Void Arte',

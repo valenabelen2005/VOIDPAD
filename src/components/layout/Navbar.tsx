@@ -3,24 +3,43 @@ import Link from 'next/link'
 import { useCartStore } from '@/store/cart'
 import { useLanguageStore } from '@/store/language'
 import { useT } from '@/hooks/useT'
-import { ShoppingBag, Menu, X } from 'lucide-react'
-import { useState } from 'react'
+import { ShoppingBag, Menu, X, ChevronDown } from 'lucide-react'
+import { useState, useRef, useEffect } from 'react'
 
-export function Navbar() {
+type Collection = { handle: string; title: string }
+
+export function Navbar({ collections = [] }: { collections?: Collection[] }) {
   const { cart, openCart } = useCartStore()
   const { locale, setLocale } = useLanguageStore()
   const quantity = cart?.totalQuantity ?? 0
   const [mobileOpen, setMobileOpen] = useState(false)
+  const [padsOpen, setPadsOpen] = useState(false)
+  const [mobilePadsOpen, setMobilePadsOpen] = useState(false)
+  const padsRef = useRef<HTMLDivElement>(null)
   const t = useT()
 
-  const navLinks = [
-    { href: '/products', label: t('nav.shopAll') },
+  useEffect(() => {
+    function handleClick(e: MouseEvent) {
+      if (padsRef.current && !padsRef.current.contains(e.target as Node)) {
+        setPadsOpen(false)
+      }
+    }
+    document.addEventListener('mousedown', handleClick)
+    return () => document.removeEventListener('mousedown', handleClick)
+  }, [])
+
+  const browseLinks = [
+    { href: '/products?sort=CREATED_AT', label: t('nav.new') },
+    { href: '/products?sort=BEST_SELLING', label: t('nav.bestSelling') },
+  ]
+
+  const staticLinks = [
     { href: '/fans', label: t('nav.fanMade') },
     { href: '/about', label: t('nav.about') },
   ]
 
   return (
-    <header className="sticky top-0 z-50 bg-[#0a0a0f]/90 backdrop-blur-md border-b border-[#1e1e2e]">
+    <header className="sticky top-0 z-50 bg-background/90 backdrop-blur-md border-b border-border">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 flex items-center h-16 gap-8">
 
         {/* Logo */}
@@ -41,7 +60,71 @@ export function Navbar() {
 
         {/* Desktop nav */}
         <nav className="hidden md:flex items-center gap-1 flex-1">
-          {navLinks.map((l) => (
+
+          {/* Pads dropdown */}
+          <div ref={padsRef} className="relative">
+            <button
+              onClick={() => setPadsOpen((v) => !v)}
+              onMouseEnter={() => setPadsOpen(true)}
+              className="flex items-center gap-1 px-3 py-1.5 text-sm text-muted hover:text-text transition-colors rounded-lg hover:bg-white/5"
+            >
+              {t('nav.shopAll')}
+              <ChevronDown size={13} className={`transition-transform duration-200 ${padsOpen ? 'rotate-180' : ''}`} />
+            </button>
+
+            {padsOpen && (
+              <div
+                onMouseLeave={() => setPadsOpen(false)}
+                className="absolute top-full left-0 mt-2 w-105 bg-surface border border-border rounded-2xl shadow-2xl p-5 flex gap-8"
+              >
+                {/* Browse */}
+                <div className="min-w-30">
+                  <p className="text-[10px] font-bold text-muted uppercase tracking-widest mb-3">{t('nav.browse')}</p>
+                  <div className="flex flex-col gap-1.5">
+                    {browseLinks.map((l) => (
+                      <Link
+                        key={l.href}
+                        href={l.href}
+                        onClick={() => setPadsOpen(false)}
+                        className="text-sm text-text/70 hover:text-cyan transition-colors"
+                      >
+                        {l.label}
+                      </Link>
+                    ))}
+                  </div>
+                </div>
+
+                {/* Divider */}
+                <div className="w-px bg-border shrink-0" />
+
+                {/* Collections */}
+                <div className="flex-1">
+                  <p className="text-[10px] font-bold text-muted uppercase tracking-widest mb-3">{t('nav.collections')}</p>
+                  <div className="flex flex-col gap-1.5">
+                    {collections.map((c) => (
+                      <Link
+                        key={c.handle}
+                        href={`/collections/${c.handle}`}
+                        onClick={() => setPadsOpen(false)}
+                        className="text-sm text-text/70 hover:text-cyan transition-colors"
+                      >
+                        {c.title}
+                      </Link>
+                    ))}
+                    <Link
+                      href="/products"
+                      onClick={() => setPadsOpen(false)}
+                      className="text-sm text-violet hover:text-violet/80 transition-colors mt-1"
+                    >
+                      {locale === 'es' ? 'Ver todo →' : 'View all →'}
+                    </Link>
+                  </div>
+                </div>
+              </div>
+            )}
+          </div>
+
+          {staticLinks.map((l) => (
             <Link key={l.href} href={l.href} className="px-3 py-1.5 text-sm text-muted hover:text-text transition-colors rounded-lg hover:bg-white/5">
               {l.label}
             </Link>
@@ -101,7 +184,35 @@ export function Navbar() {
       {/* Mobile nav */}
       {mobileOpen && (
         <nav className="md:hidden border-t border-border px-4 py-3 flex flex-col gap-1">
-          {navLinks.map((l) => (
+          {/* Pads accordion */}
+          <button
+            onClick={() => setMobilePadsOpen((v) => !v)}
+            className="flex items-center justify-between px-3 py-2.5 text-sm text-muted hover:text-text rounded-lg hover:bg-white/5 transition-colors w-full text-left"
+          >
+            {t('nav.shopAll')}
+            <ChevronDown size={13} className={`transition-transform duration-200 ${mobilePadsOpen ? 'rotate-180' : ''}`} />
+          </button>
+          {mobilePadsOpen && (
+            <div className="pl-4 flex flex-col gap-1 pb-1">
+              <p className="text-[10px] font-bold text-muted uppercase tracking-widest px-3 py-1">{t('nav.browse')}</p>
+              {browseLinks.map((l) => (
+                <Link key={l.href} href={l.href} onClick={() => setMobileOpen(false)} className="px-3 py-2 text-sm text-text/70 hover:text-cyan rounded-lg hover:bg-white/5 transition-colors">
+                  {l.label}
+                </Link>
+              ))}
+              <p className="text-[10px] font-bold text-muted uppercase tracking-widest px-3 pt-2 pb-1">{t('nav.collections')}</p>
+              {collections.map((c) => (
+                <Link key={c.handle} href={`/collections/${c.handle}`} onClick={() => setMobileOpen(false)} className="px-3 py-2 text-sm text-text/70 hover:text-cyan rounded-lg hover:bg-white/5 transition-colors">
+                  {c.title}
+                </Link>
+              ))}
+              <Link href="/products" onClick={() => setMobileOpen(false)} className="px-3 py-2 text-sm text-violet hover:text-violet/80 transition-colors">
+                {locale === 'es' ? 'Ver todo →' : 'View all →'}
+              </Link>
+            </div>
+          )}
+
+          {staticLinks.map((l) => (
             <Link
               key={l.href}
               href={l.href}
