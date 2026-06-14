@@ -19,10 +19,6 @@ export function Hero() {
       </div>
 
       <div className="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 text-center">
-        <div className="inline-flex items-center bg-violet/15 border border-violet/30 text-violet/80 text-xs font-medium px-3.5 py-1.5 rounded-full mb-8">
-          {t('hero.badge')}
-        </div>
-
         <h1 className="text-5xl sm:text-7xl font-black text-text leading-none tracking-tight mb-6">
           {t('hero.title1')}{' '}
           <span className="bg-linear-to-r from-cyan to-violet bg-clip-text text-transparent">
