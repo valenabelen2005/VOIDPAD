@@ -1,7 +1,4 @@
 'use client'
-import Link from 'next/link'
-import { Button } from '@/components/ui/Button'
-import { ArrowRight } from 'lucide-react'
 import { useT } from '@/hooks/useT'
 
 export function Hero() {
@@ -26,23 +23,9 @@ export function Hero() {
           </span>
         </h1>
 
-        <p className="text-lg text-muted max-w-xl mx-auto mb-10 leading-relaxed">
+        <p className="text-lg text-muted max-w-xl mx-auto leading-relaxed">
           {t('hero.subtitle')}
         </p>
-
-        <div className="flex items-center justify-center gap-4 flex-wrap">
-          <Link href="/products">
-            <Button size="lg">
-              {t('hero.cta1')}
-              <ArrowRight size={16} />
-            </Button>
-          </Link>
-          <Link href="/trending">
-            <Button size="lg" variant="outline">
-              {t('hero.cta2')}
-            </Button>
-          </Link>
-        </div>
       </div>
 
       <div className="absolute bottom-0 left-0 right-0 h-30 bg-linear-to-t from-background to-transparent pointer-events-none" />
