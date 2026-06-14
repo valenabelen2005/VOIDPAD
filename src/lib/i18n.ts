@@ -11,9 +11,6 @@ export const translations = {
     'nav.featured': 'Featured',
     'nav.bestSelling': 'Best Selling',
     'nav.collections': 'Collections',
-    'nav.voidClassics': 'Void Classics',
-    'nav.voidSeries': 'Void Series',
-    'nav.voidArt': 'Void Art',
 
     // AnnouncementBar
     'announce.1': 'Every pad is printed on demand — designed to last, not to be replaced.',
@@ -49,8 +46,8 @@ export const translations = {
     'reviews.label': 'What customers say',
     'reviews.rating': '4.8 / 5',
     'reviews.count': 'Based on 47 verified reviews',
-    'reviews.1': 'Ordered the Void Series 90×40. Arrived rolled, took 10 minutes to flatten. Once it did — perfect. The print is sharper than I expected.',
-    'reviews.2': 'Got the Void Classics in black. I was skeptical about paying this much for a desk pad. Three months later I get it.',
+    'reviews.1': 'Ordered the Gaming Collection 90×40. Arrived rolled, took 10 minutes to flatten. Once it did — perfect. The print is sharper than I expected.',
+    'reviews.2': 'Got the Japanese Collection. I was skeptical about paying this much for a desk pad. Three months later I get it.',
     'reviews.3': 'The stitching on the edges is actually good. I\'ve had cheaper ones fray in weeks. This one\'s held up. Worth it.',
 
     // Footer
@@ -106,9 +103,6 @@ export const translations = {
     'drawer.checkout': 'Checkout',
 
     // Collection descriptions
-    'collection.void-classics.desc': 'The essentials, without compromise. Pure color backgrounds with a name that says it all. For those who know that minimalism isn\'t a lack of character; it\'s the highest form of it. One surface, one color, zero distractions.',
-    'collection.void-series.desc': 'Where geometry becomes identity. Each design was born from hours in front of a screen; from trading charts, lines of code, circuit diagrams. A true limited edition. When a design is gone, it\'s gone for good. If you see it, it\'s yours.',
-    'collection.void-art.desc': 'Where the setup becomes a canvas. Bold prints, raw aesthetics, designs that refuse to go unnoticed. If you want your desk to say something, this is where it starts.',
     'collection.gaming-collection.desc': 'Inspired by the worlds that kept us playing until dawn. Epic moments, adventure and legendary challenges.',
     'collection.gaming.desc': 'Inspired by the worlds that kept us playing until dawn. Epic moments, adventure and legendary challenges.',
     'collection.velocity-series.desc': 'Speed turned into design. Supercars, aviation and machines built to break limits.',
@@ -154,9 +148,6 @@ export const translations = {
     'nav.featured': 'Destacados',
     'nav.bestSelling': 'Más vendidos',
     'nav.collections': 'Colecciones',
-    'nav.voidClassics': 'Void Clásicos',
-    'nav.voidSeries': 'Void Series',
-    'nav.voidArt': 'Void Arte',
 
     // AnnouncementBar
     'announce.1': 'Cada pad se imprime al pedirlo — pensado para durar, no para reemplazarse.',
@@ -192,8 +183,8 @@ export const translations = {
     'reviews.label': 'Lo que dicen los clientes',
     'reviews.rating': '4,8 / 5',
     'reviews.count': 'Basado en 47 reseñas verificadas',
-    'reviews.1': 'Pedí el Void Series 90×40. Llegó enrollado, tardé 10 minutos en que quedara plano. Después de eso — perfecto. La impresión es más nítida de lo que esperaba.',
-    'reviews.2': 'Compré el Void Classics negro. Me daba cosa pagar tanto por un pad. Tres meses después lo entiendo.',
+    'reviews.1': 'Pedí el Gaming Collection 90×40. Llegó enrollado, tardé 10 minutos en que quedara plano. Después de eso — perfecto. La impresión es más nítida de lo que esperaba.',
+    'reviews.2': 'Compré el Japanese Collection. Me daba cosa pagar tanto por un pad. Tres meses después lo entiendo.',
     'reviews.3': 'El cosido de los bordes es bueno de verdad. Otros más baratos se me deshilacharon en semanas. Este aguanta. Vale la pena.',
 
     // Footer
@@ -249,9 +240,6 @@ export const translations = {
     'drawer.checkout': 'Finalizar compra',
 
     // Collection descriptions
-    'collection.void-classics.desc': 'Lo esencial, sin concesiones. Fondos de color puro con un nombre que lo dice todo. Para quienes saben que el minimalismo no es falta de carácter; es su forma más elevada. Una superficie, un color, cero distracciones.',
-    'collection.void-series.desc': 'Donde la geometría se convierte en identidad. Cada diseño nació de horas frente a una pantalla; de gráficos de trading, líneas de código, diagramas de circuitos. Una edición verdaderamente limitada. Cuando un diseño se agota, desaparece para siempre. Si lo ves, es tuyo.',
-    'collection.void-art.desc': 'Donde el setup se convierte en lienzo. Estampados atrevidos, estética raw, diseños que no pasan desapercibidos. Si querés que tu escritorio diga algo, acá empieza todo.',
     'collection.gaming-collection.desc': 'Inspirado en los mundos que nos hicieron jugar hasta el amanecer. Épica, aventura y desafíos legendarios.',
     'collection.gaming.desc': 'Inspirado en los mundos que nos hicieron jugar hasta el amanecer. Épica, aventura y desafíos legendarios.',
     'collection.velocity-series.desc': 'La velocidad hecha diseño. Superdeportivos, aviación y máquinas creadas para superar límites.',

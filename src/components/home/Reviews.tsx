@@ -18,9 +18,9 @@ function Stars({ count = 5 }: { count?: number }) {
 }
 
 const staticReviewers = [
-  { name: 'Marcos V.', country: 'Spain', date: 'March 2026', product: 'Void Series 90×40', stars: 5, key: 'reviews.1' as const },
-  { name: 'Julie R.', country: 'Netherlands', date: 'Feb 2026', product: 'Void Classics', stars: 5, key: 'reviews.2' as const },
-  { name: 'Nico B.', country: 'Germany', date: 'Jan 2026', product: 'Void Series', stars: 4, key: 'reviews.3' as const },
+  { name: 'Marcos V.', country: 'Spain', date: 'March 2026', product: 'Gaming Collection 90×40', stars: 5, key: 'reviews.1' as const },
+  { name: 'Julie R.', country: 'Netherlands', date: 'Feb 2026', product: 'Japanese Collection', stars: 5, key: 'reviews.2' as const },
+  { name: 'Nico B.', country: 'Germany', date: 'Jan 2026', product: 'Anime Collection', stars: 4, key: 'reviews.3' as const },
 ]
 
 interface ReviewsProps {

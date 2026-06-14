@@ -10,15 +10,12 @@ const content = {
     intro: 'VoidPad started from a simple frustration: every desk pad on the market looked the same. Solid black. Generic logo. Made in bulk and dropped in a warehouse. We wanted surfaces that meant something — pads you actually choose, not settle for. So we built a small operation that prints every order individually, with artwork that goes from a file to your desk in under a week.',
     whatTitle: 'What we make',
     what1: "Desk pads and mouse pads. That's it. We don't do keycaps, cables, or keyboard kits. We do one thing and we try to do it right: a surface that holds up every day, prints that don't fade after three washes, and edges that don't fray.",
-    what2: 'Every design lives in one of three lines.',
-    classicsDesc: '— pure color, zero noise.',
-    seriesDesc: '— geometry and pattern work, released in limited drops that retire permanently.',
-    artDesc: '— for when you want your desk to say something loud.',
+    what2: 'Our collections cover everything from gaming and anime to cinema, Japanese aesthetics, landscapes and community-voted designs. Each one is printed on demand — when a design retires, it\'s gone for good.',
     whoTitle: "Who it's for",
     profiles: [
-      { label: 'The focused one', desc: 'You sit at your desk for hours. You want a surface that disappears into the setup and lets you concentrate. Void Classics is yours.' },
-      { label: 'The collector', desc: "You follow drops, you notice when something retires. Void Series is designed specifically for you — once a run ends, it's gone." },
-      { label: 'The statement maker', desc: 'Your setup is an extension of who you are. You want art, not a product. Void Art and custom orders are the answer.' },
+      { label: 'The gamer', desc: "You want your desk to match the energy of what's on your screen. Gaming and Anime collections were made for your setup." },
+      { label: 'The visual thinker', desc: 'Cinema, Japanese aesthetics, landscapes — you want art with meaning. Something that says something before you even open a window.' },
+      { label: 'The community builder', desc: 'You vote, you suggest, you shape the next drop. The Community Collection exists because of people like you.' },
     ],
     howTitle: "How it's made",
     steps: [
@@ -36,15 +33,12 @@ const content = {
     intro: 'VoidPad nació de una frustración simple: todos los desk pads del mercado se veían igual. Negro sólido. Logo genérico. Fabricados en masa y apilados en un almacén. Queríamos superficies que significaran algo — pads que elijas de verdad, no con los que te conformas. Así que armamos una operación pequeña que imprime cada pedido de forma individual, con arte que va desde un archivo hasta tu escritorio en menos de una semana.',
     whatTitle: 'Qué hacemos',
     what1: 'Desk pads y mouse pads. Nada más. No hacemos keycaps, cables ni kits de teclado. Hacemos una sola cosa e intentamos hacerla bien: una superficie que aguante el día a día, con impresiones que no se desvanecen a los tres lavados y bordes que no se deshilachan.',
-    what2: 'Cada diseño vive en una de tres líneas.',
-    classicsDesc: '— color puro, cero ruido.',
-    seriesDesc: '— trabajo de geometría y patrones, lanzado en drops limitados que se retiran de forma permanente.',
-    artDesc: '— para cuando querés que tu escritorio diga algo en voz alta.',
+    what2: 'Nuestras colecciones van desde gaming y anime hasta cine, estética japonesa, paisajes y diseños votados por la comunidad. Cada uno se imprime al pedirlo — cuando un diseño se retira, desaparece para siempre.',
     whoTitle: 'Para quién es',
     profiles: [
-      { label: 'El que se concentra', desc: 'Pasás horas en tu escritorio. Querés una superficie que se funda con el setup y te deje concentrarte. Void Classics es tuyo.' },
-      { label: 'El coleccionista', desc: 'Seguís los drops, notás cuando algo se retira. Void Series está diseñado específicamente para vos — cuando un run termina, se fue.' },
-      { label: 'El que dice algo', desc: 'Tu setup es una extensión de quién sos. Querés arte, no un producto. Void Art y los pedidos personalizados son la respuesta.' },
+      { label: 'El gamer', desc: 'Querés que tu escritorio esté a la altura de lo que tenés en pantalla. Las colecciones Gaming y Anime fueron hechas para tu setup.' },
+      { label: 'El pensador visual', desc: 'Cine, estética japonesa, paisajes — querés arte con significado. Algo que diga algo antes de que abras una sola ventana.' },
+      { label: 'El que construye comunidad', desc: 'Votás, sugerís, das forma al próximo drop. La Community Collection existe por personas como vos.' },
     ],
     howTitle: 'Cómo se hace',
     steps: [
@@ -76,12 +70,7 @@ export default function AboutPage() {
       <div className="mb-16 pb-16 border-b border-[#1e1e2e]">
         <h2 className="text-xl font-bold text-[#f0f0f5] mb-4">{t.whatTitle}</h2>
         <p className="text-sm text-[#c0c0d0] leading-relaxed mb-4">{t.what1}</p>
-        <p className="text-sm text-[#c0c0d0] leading-relaxed">
-          {t.what2}{' '}
-          <strong className="text-[#f0f0f5]">Void Classics</strong> {t.classicsDesc}{' '}
-          <strong className="text-[#f0f0f5]">Void Series</strong> {t.seriesDesc}{' '}
-          <strong className="text-[#f0f0f5]">Void Art</strong> {t.artDesc}
-        </p>
+        <p className="text-sm text-[#c0c0d0] leading-relaxed">{t.what2}</p>
       </div>
 
       <div className="mb-16 pb-16 border-b border-[#1e1e2e]">
