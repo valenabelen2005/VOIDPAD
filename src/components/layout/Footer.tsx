@@ -1,5 +1,6 @@
 'use client'
 import Link from 'next/link'
+import Image from 'next/image'
 import { useT } from '@/hooks/useT'
 
 export function Footer() {
@@ -30,17 +31,7 @@ export function Footer() {
           {/* Brand */}
           <div className="col-span-2 md:col-span-1">
             <div className="flex items-center gap-2 mb-3">
-              <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <defs>
-                  <linearGradient id="footerSatGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-                    <stop offset="0%" stopColor="#00e5ff" />
-                    <stop offset="100%" stopColor="#7c3aed" />
-                  </linearGradient>
-                </defs>
-                <ellipse cx="16" cy="16" rx="13" ry="4.5" stroke="url(#footerSatGrad)" strokeWidth="1.5" strokeDasharray="20 21" strokeDashoffset="0" fill="none" opacity="0.5" />
-                <circle cx="16" cy="16" r="7" fill="url(#footerSatGrad)" />
-                <ellipse cx="16" cy="16" rx="13" ry="4.5" stroke="url(#footerSatGrad)" strokeWidth="1.5" strokeDasharray="20 21" strokeDashoffset="21" fill="none" />
-              </svg>
+              <Image src="/logo.png" alt="VoidPad" width={32} height={32} className="object-contain" />
               <span className="font-bold text-[#f0f0f5]">VoidPad</span>
             </div>
             <p className="text-sm text-[#8888a0] leading-relaxed">{t('footer.desc')}</p>

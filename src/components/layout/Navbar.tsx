@@ -1,5 +1,6 @@
 'use client'
 import Link from 'next/link'
+import Image from 'next/image'
 import { useCartStore } from '@/store/cart'
 import { useLanguageStore } from '@/store/language'
 import { useT } from '@/hooks/useT'
@@ -44,17 +45,7 @@ export function Navbar({ collections = [] }: { collections?: Collection[] }) {
 
         {/* Logo */}
         <Link href="/" className="flex items-center gap-2 shrink-0">
-          <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <defs>
-              <linearGradient id="satGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-                <stop offset="0%" stopColor="#00e5ff" />
-                <stop offset="100%" stopColor="#7c3aed" />
-              </linearGradient>
-            </defs>
-            <ellipse cx="16" cy="16" rx="13" ry="4.5" stroke="url(#satGrad)" strokeWidth="1.5" strokeDasharray="20 21" strokeDashoffset="0" fill="none" opacity="0.5" />
-            <circle cx="16" cy="16" r="7" fill="url(#satGrad)" />
-            <ellipse cx="16" cy="16" rx="13" ry="4.5" stroke="url(#satGrad)" strokeWidth="1.5" strokeDasharray="20 21" strokeDashoffset="21" fill="none" />
-          </svg>
+          <Image src="/logo.png" alt="VoidPad" width={36} height={36} className="object-contain" />
           <span className="font-bold text-lg tracking-tight text-text">VoidPad</span>
         </Link>
 
