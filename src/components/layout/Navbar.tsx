@@ -15,9 +15,7 @@ export function Navbar() {
 
   const navLinks = [
     { href: '/products', label: t('nav.shopAll') },
-    { href: '/collections/void-classics', label: 'Void Classics' },
-    { href: '/collections/void-series', label: 'Void Series' },
-    { href: '/collections/void-art', label: 'Void Art' },
+    { href: '/fans', label: t('nav.fanMade') },
     { href: '/about', label: t('nav.about') },
   ]
 

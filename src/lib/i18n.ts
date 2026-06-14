@@ -5,6 +5,7 @@ export const translations = {
     // Navbar
     'nav.shopAll': 'Shop All',
     'nav.about': 'About',
+    'nav.fanMade': 'Fan Made',
     'nav.voidClassics': 'Void Classics',
     'nav.voidSeries': 'Void Series',
     'nav.voidArt': 'Void Art',
@@ -14,10 +15,10 @@ export const translations = {
     'announce.2': 'All drops are limited. When a design sells out, it\'s gone for good.',
 
     // Hero
-    // 'hero.badge': 'Handcrafted for setups that mean something.',
+    'hero.badge': 'Handcrafted for setups that mean something.',
     'hero.title1': 'Your setup.',
     'hero.title2': 'Your art.',
-    'hero.subtitle': 'We make desk pads for the people who care about every inch of their setup. Minimal or loud — there\'s a surface for your kind of focus.',
+    'hero.subtitle': 'You choose the design. We do the rest.',
     'hero.cta1': 'Shop Now',
     'hero.cta2': 'View Trending',
     'hero.stat1': 'Designs',
@@ -124,6 +125,7 @@ export const translations = {
     // Navbar
     'nav.shopAll': 'Ver todo',
     'nav.about': 'Nosotros',
+    'nav.fanMade': 'Hecho por los fans',
     'nav.voidClassics': 'Void Clásicos',
     'nav.voidSeries': 'Void Series',
     'nav.voidArt': 'Void Arte',
@@ -136,7 +138,7 @@ export const translations = {
     'hero.badge': 'Para setups que dicen algo.',
     'hero.title1': 'Tu setup.',
     'hero.title2': 'Tu arte.',
-    'hero.subtitle': 'Hechos para quienes cuidan cada centímetro de su setup. Minimalistas o atrevidos — hay una superficie para tu tipo de concentración.',
+    'hero.subtitle': 'Tú eliges el diseño. Nosotros hacemos el resto.',
     'hero.cta1': 'Comprar',
     'hero.cta2': 'Ver tendencias',
     'hero.stat1': 'Diseños',
