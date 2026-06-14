@@ -34,7 +34,7 @@ export function Navbar({ collections = [] }: { collections?: Collection[] }) {
   ]
 
   const staticLinks = [
-    { href: '/fans', label: t('nav.fanMade') },
+    { href: '/collections/community-collection', label: t('nav.fanMade') },
     { href: '/about', label: t('nav.about') },
   ]
 
