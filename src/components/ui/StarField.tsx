@@ -19,12 +19,12 @@ export function StarField() {
       if (!canvas) return
       canvas.width = window.innerWidth
       canvas.height = window.innerHeight
-      stars = Array.from({ length: 120 }, () => ({
+      stars = Array.from({ length: 280 }, () => ({
         x: Math.random() * canvas.width,
         y: Math.random() * canvas.height,
-        r: 0.5 + Math.random() * 1,
-        alpha: 0.3 + Math.random() * 0.4,
-        speed: 0.003 + Math.random() * 0.005,
+        r: 0.4 + Math.random() * 1.2,
+        alpha: 0.5 + Math.random() * 0.5,
+        speed: 0.002 + Math.random() * 0.004,
         phase: Math.random() * Math.PI * 2,
       }))
     }
