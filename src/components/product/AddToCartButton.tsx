@@ -17,13 +17,16 @@ export function AddToCartButton({ variantId, available }: Props) {
   async function handleAddToCart() {
     if (!available || loading) return
     setLoading(true)
-    const lines = [{ merchandiseId: variantId, quantity: 1 }]
-    const cart = cartId ? await addToCartAction(cartId, lines) : await createCartAction(lines)
-    setCart(cart)
-    setLoading(false)
-    setAdded(true)
-    openCart()
-    setTimeout(() => setAdded(false), 2000)
+    try {
+      const lines = [{ merchandiseId: variantId, quantity: 1 }]
+      const cart = cartId ? await addToCartAction(cartId, lines) : await createCartAction(lines)
+      setCart(cart)
+      setAdded(true)
+      openCart()
+      setTimeout(() => setAdded(false), 2000)
+    } finally {
+      setLoading(false)
+    }
   }
 
   if (!available) {

@@ -16,10 +16,9 @@ export function CartDrawer() {
 
   useEffect(() => {
     if (cartId && !cart) {
-      getCartAction(cartId).then((c) => {
-        if (c) setCart(c)
-        else clearCart()
-      })
+      getCartAction(cartId)
+        .then((c) => { if (c) setCart(c); else clearCart() })
+        .catch(() => clearCart())
     }
   }, [cartId])
 
@@ -32,17 +31,23 @@ export function CartDrawer() {
     if (!cart) return
     if (quantity <= 0) return handleRemove(lineId)
     setLoadingLine(lineId)
-    const updated = await updateCartLineAction(cart.id, lineId, quantity)
-    setCart(updated)
-    setLoadingLine(null)
+    try {
+      const updated = await updateCartLineAction(cart.id, lineId, quantity)
+      setCart(updated)
+    } finally {
+      setLoadingLine(null)
+    }
   }
 
   async function handleRemove(lineId: string) {
     if (!cart) return
     setLoadingLine(lineId)
-    const updated = await removeCartLinesAction(cart.id, [lineId])
-    setCart(updated)
-    setLoadingLine(null)
+    try {
+      const updated = await removeCartLinesAction(cart.id, [lineId])
+      setCart(updated)
+    } finally {
+      setLoadingLine(null)
+    }
   }
 
   const lines = cart?.lines.nodes ?? []
