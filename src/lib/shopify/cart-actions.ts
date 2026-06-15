@@ -1,6 +1,10 @@
 'use server'
-import { createCart, addToCart, updateCartLine, removeCartLines } from './index'
+import { createCart, addToCart, updateCartLine, removeCartLines, getCart } from './index'
 import type { ShopifyCart } from '@/types/shopify'
+
+export async function getCartAction(cartId: string): Promise<ShopifyCart | null> {
+  return getCart(cartId)
+}
 
 export async function createCartAction(
   lines: { merchandiseId: string; quantity: number }[]

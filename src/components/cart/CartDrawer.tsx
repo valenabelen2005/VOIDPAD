@@ -5,14 +5,23 @@ import { useCartStore } from '@/store/cart'
 import { CartItem } from './CartItem'
 import { Button } from '@/components/ui/Button'
 import { formatPrice } from '@/lib/utils'
-import { updateCartLineAction, removeCartLinesAction } from '@/lib/shopify/cart-actions'
+import { updateCartLineAction, removeCartLinesAction, getCartAction } from '@/lib/shopify/cart-actions'
 import { useT } from '@/hooks/useT'
 
 export function CartDrawer() {
-  const { cart, isOpen, closeCart, setCart } = useCartStore()
+  const { cart, cartId, isOpen, closeCart, setCart, clearCart } = useCartStore()
   const [loadingLine, setLoadingLine] = useState<string | null>(null)
   const overlayRef = useRef<HTMLDivElement>(null)
   const t = useT()
+
+  useEffect(() => {
+    if (cartId && !cart) {
+      getCartAction(cartId).then((c) => {
+        if (c) setCart(c)
+        else clearCart()
+      })
+    }
+  }, [cartId])
 
   useEffect(() => {
     document.body.style.overflow = isOpen ? 'hidden' : ''
