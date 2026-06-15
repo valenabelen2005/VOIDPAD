@@ -28,7 +28,7 @@ export function CartItem({ line, onUpdate, onRemove, loading }: Props) {
         <p className="text-sm font-medium text-[#f0f0f5] truncate">{merchandise.product.title}</p>
         {size && <p className="text-xs text-[#8888a0] mt-0.5">{size}</p>}
         <p className="text-sm font-semibold text-[#00e5ff] mt-1">
-          {formatPrice(cost.totalAmount.amount, cost.totalAmount.currencyCode)}
+          {formatPrice(merchandise.price.amount, merchandise.price.currencyCode)}
         </p>
       </div>
 
