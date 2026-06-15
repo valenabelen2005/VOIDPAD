@@ -2,14 +2,14 @@
 import { useState } from 'react'
 import { Button } from '@/components/ui/Button'
 import { useCartStore } from '@/store/cart'
-import { createCartAction, addToCartAction, updateCartLineAction, getCartAction } from '@/lib/shopify/cart-actions'
+import { createCartAction, addToCartSafeAction } from '@/lib/shopify/cart-actions'
 import { useT } from '@/hooks/useT'
 import { ShoppingBag, Check } from 'lucide-react'
 
 type Props = { variantId: string; available: boolean }
 
 export function AddToCartButton({ variantId, available }: Props) {
-  const { cartId, cart, setCart, openCart } = useCartStore()
+  const { cartId, setCart, openCart } = useCartStore()
   const [loading, setLoading] = useState(false)
   const [added, setAdded] = useState(false)
   const t = useT()
@@ -22,14 +22,7 @@ export function AddToCartButton({ variantId, available }: Props) {
       if (!cartId) {
         updated = await createCartAction([{ merchandiseId: variantId, quantity: 1 }])
       } else {
-        // If cart isn't hydrated yet, fetch it first to avoid duplicate lines
-        const currentCart = cart ?? await getCartAction(cartId)
-        const existingLine = currentCart?.lines.nodes.find((l) => l.merchandise.id === variantId)
-        if (existingLine) {
-          updated = await updateCartLineAction(cartId, existingLine.id, existingLine.quantity + 1)
-        } else {
-          updated = await addToCartAction(cartId, [{ merchandiseId: variantId, quantity: 1 }])
-        }
+        updated = await addToCartSafeAction(cartId, variantId)
       }
       setCart(updated)
       setAdded(true)

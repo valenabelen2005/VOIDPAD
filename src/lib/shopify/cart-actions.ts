@@ -19,6 +19,22 @@ export async function addToCartAction(
   return addToCart(cartId, lines)
 }
 
+// Fetches fresh cart from Shopify, deduplicates by variantId server-side
+export async function addToCartSafeAction(
+  cartId: string,
+  variantId: string,
+): Promise<ShopifyCart> {
+  const currentCart = await getCart(cartId)
+  if (!currentCart) {
+    return createCart([{ merchandiseId: variantId, quantity: 1 }])
+  }
+  const existingLine = currentCart.lines.nodes.find((l) => l.merchandise.id === variantId)
+  if (existingLine) {
+    return updateCartLine(cartId, existingLine.id, existingLine.quantity + 1)
+  }
+  return addToCart(cartId, [{ merchandiseId: variantId, quantity: 1 }])
+}
+
 export async function updateCartLineAction(
   cartId: string,
   lineId: string,
