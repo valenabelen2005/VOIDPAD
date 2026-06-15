@@ -22,6 +22,15 @@ export function CartDrawer() {
     }
   }, [cartId])
 
+  // Sync with Shopify every time the drawer opens to keep line IDs fresh
+  useEffect(() => {
+    if (isOpen && cartId) {
+      getCartAction(cartId)
+        .then((c) => { if (c) setCart(c); else clearCart() })
+        .catch(() => clearCart())
+    }
+  }, [isOpen])
+
   useEffect(() => {
     document.body.style.overflow = isOpen ? 'hidden' : ''
     return () => { document.body.style.overflow = '' }
@@ -71,9 +80,19 @@ export function CartDrawer() {
               </span>
             )}
           </div>
-          <button onClick={closeCart} className="p-1.5 text-[#8888a0] hover:text-[#f0f0f5] rounded-lg hover:bg-white/5 transition-colors">
-            <X size={18} />
-          </button>
+          <div className="flex items-center gap-1">
+            {lines.length > 0 && (
+              <button
+                onClick={clearCart}
+                className="text-xs text-[#8888a0] hover:text-red-400 transition-colors px-2 py-1 rounded-lg hover:bg-white/5"
+              >
+                Vaciar
+              </button>
+            )}
+            <button onClick={closeCart} className="p-1.5 text-[#8888a0] hover:text-[#f0f0f5] rounded-lg hover:bg-white/5 transition-colors">
+              <X size={18} />
+            </button>
+          </div>
         </div>
 
         <div className="flex-1 overflow-y-auto px-5">
