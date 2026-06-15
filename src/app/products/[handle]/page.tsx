@@ -1,4 +1,6 @@
 import { notFound } from 'next/navigation'
+import Link from 'next/link'
+import { ChevronLeft } from 'lucide-react'
 import { getProductByHandle } from '@/lib/shopify'
 import { ProductDetails } from '@/components/product/ProductDetails'
 import { ReviewForm } from '@/components/reviews/ReviewForm'
@@ -29,8 +31,28 @@ export default async function ProductPage({ params }: Props) {
   ])
   if (!product) notFound()
 
+  const primaryCollection = product.collections.nodes[0] ?? null
+
   return (
     <div className="max-w-7xl mx-auto px-4 sm:px-6 py-10 space-y-10">
+      {/* Breadcrumb */}
+      <nav className="flex items-center gap-2 text-sm text-muted">
+        <Link href="/products" className="hover:text-text transition-colors">Pads</Link>
+        {primaryCollection && (
+          <>
+            <ChevronLeft size={14} className="text-muted/40 rotate-180" />
+            <Link
+              href={`/collections/${primaryCollection.handle}`}
+              className="hover:text-text transition-colors"
+            >
+              {primaryCollection.title}
+            </Link>
+          </>
+        )}
+        <ChevronLeft size={14} className="text-muted/40 rotate-180" />
+        <span className="text-text truncate max-w-[200px]">{product.title}</span>
+      </nav>
+
       <ProductDetails product={product} />
 
       <div className="border-t border-border pt-10 grid grid-cols-1 lg:grid-cols-2 gap-8">
