@@ -2,7 +2,7 @@
 import { useState } from 'react'
 import { Button } from '@/components/ui/Button'
 import { useCartStore } from '@/store/cart'
-import { createCartAction, addToCartAction, updateCartLineAction } from '@/lib/shopify/cart-actions'
+import { createCartAction, addToCartAction, updateCartLineAction, getCartAction } from '@/lib/shopify/cart-actions'
 import { useT } from '@/hooks/useT'
 import { ShoppingBag, Check } from 'lucide-react'
 
@@ -22,7 +22,9 @@ export function AddToCartButton({ variantId, available }: Props) {
       if (!cartId) {
         updated = await createCartAction([{ merchandiseId: variantId, quantity: 1 }])
       } else {
-        const existingLine = cart?.lines.nodes.find((l) => l.merchandise.id === variantId)
+        // If cart isn't hydrated yet, fetch it first to avoid duplicate lines
+        const currentCart = cart ?? await getCartAction(cartId)
+        const existingLine = currentCart?.lines.nodes.find((l) => l.merchandise.id === variantId)
         if (existingLine) {
           updated = await updateCartLineAction(cartId, existingLine.id, existingLine.quantity + 1)
         } else {
