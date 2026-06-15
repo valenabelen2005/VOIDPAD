@@ -22,15 +22,6 @@ export function CartDrawer() {
     }
   }, [cartId])
 
-  // Sync with Shopify every time the drawer opens to keep line IDs fresh
-  useEffect(() => {
-    if (isOpen && cartId) {
-      getCartAction(cartId)
-        .then((c) => { if (c) setCart(c); else clearCart() })
-        .catch(() => clearCart())
-    }
-  }, [isOpen])
-
   useEffect(() => {
     document.body.style.overflow = isOpen ? 'hidden' : ''
     return () => { document.body.style.overflow = '' }
