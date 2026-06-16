@@ -21,6 +21,7 @@ export const PRODUCT_FRAGMENT = `
         selectedOptions { name value }
         price { amount currencyCode }
         compareAtPrice { amount currencyCode }
+        image { url altText width height }
       }
     }
     collections(first: 3) { nodes { handle title } }

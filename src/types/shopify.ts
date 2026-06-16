@@ -17,6 +17,7 @@ export type ShopifyProductVariant = {
   selectedOptions: { name: string; value: string }[]
   price: { amount: string; currencyCode: string }
   compareAtPrice: { amount: string; currencyCode: string } | null
+  image: ShopifyImage | null
 }
 
 export type ShopifyProduct = {

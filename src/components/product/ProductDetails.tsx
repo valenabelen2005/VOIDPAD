@@ -1,5 +1,5 @@
 'use client'
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import Image from 'next/image'
 import { formatPrice } from '@/lib/utils'
 import { AddToCartButton } from './AddToCartButton'
@@ -50,6 +50,12 @@ export function ProductDetails({ product }: { product: ShopifyProduct }) {
   const selectedVariant: ShopifyProductVariant | undefined = product.variants.nodes.find((v) =>
     v.selectedOptions.every((o) => selectedOptions[o.name] === o.value)
   )
+
+  useEffect(() => {
+    if (!selectedVariant?.image) return
+    const idx = images.findIndex((img) => img.url === selectedVariant.image!.url)
+    if (idx !== -1) setActiveImage(idx)
+  }, [selectedVariant?.id])
 
   const price = selectedVariant?.price ?? product.priceRange.minVariantPrice
   const compareAt = selectedVariant?.compareAtPrice
