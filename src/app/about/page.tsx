@@ -21,7 +21,7 @@ const content = {
     steps: [
       { n: '01', title: 'You order', body: 'No stock. No warehouse. Your order triggers production — nothing sits waiting.' },
       { n: '02', title: 'We print', body: 'Printed on professional equipment within 3–5 business days. Each pad is checked before it ships.' },
-      { n: '03', title: 'It ships to you', body: 'Packed flat to minimize damage. Tracking sent as soon as it leaves. Free EU shipping on orders over €50.' },
+      { n: '03', title: 'It ships to you', body: 'Packed flat to minimize damage. Tracking sent as soon as it leaves. Free US shipping on orders over $50.' },
     ],
     ctaNote: "That's the whole operation. If it resonates — come find your surface.",
     cta: 'Shop All Products',
@@ -44,7 +44,7 @@ const content = {
     steps: [
       { n: '01', title: 'Pedís', body: 'Sin stock. Sin almacén. Tu pedido activa la producción — nada espera en un estante.' },
       { n: '02', title: 'Imprimimos', body: 'Impreso en equipos profesionales en 3–5 días hábiles. Cada pad se revisa antes de salir.' },
-      { n: '03', title: 'Te llega', body: 'Embalado plano para minimizar daños. Seguimiento enviado en cuanto sale. Envío gratis en la UE en pedidos superiores a €50.' },
+      { n: '03', title: 'Te llega', body: 'Embalado plano para minimizar daños. Seguimiento enviado en cuanto sale. Envío gratis en USA en pedidos superiores a $50.' },
     ],
     ctaNote: 'Esa es toda la operación. Si tiene sentido para vos — vení a encontrar tu superficie.',
     cta: 'Ver todos los productos',

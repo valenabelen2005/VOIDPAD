@@ -142,7 +142,7 @@ export function ProductDetails({ product }: { product: ShopifyProduct }) {
         {/* Trust banner */}
         <div className="flex items-center gap-2 bg-[#7c3aed]/10 border border-[#7c3aed]/30 rounded-xl px-4 py-3">
           <Truck size={16} className="text-[#7c3aed] shrink-0" />
-          <span className="text-sm text-[#f0f0f5]">Free shipping on orders over <strong>€50</strong> — No EU customs fees</span>
+          <span className="text-sm text-[#f0f0f5]">Free shipping on orders over <strong>$50</strong> — Fast US delivery</span>
         </div>
 
         {/* Size / options selector */}
@@ -206,7 +206,7 @@ export function ProductDetails({ product }: { product: ShopifyProduct }) {
             { icon: Users, label: '10,000+ Happy setups' },
             { icon: Zap, label: 'Printed in 3–5 days' },
             { icon: Shield, label: 'Machine washable' },
-            { icon: Truck, label: 'Free shipping €50+' },
+            { icon: Truck, label: 'Free shipping $50+' },
           ].map(({ icon: Icon, label }) => (
             <div key={label} className="flex items-center gap-2">
               <Icon size={14} className="text-[#7c3aed] shrink-0" />
@@ -232,7 +232,7 @@ export function ProductDetails({ product }: { product: ShopifyProduct }) {
             </ul>
           </Accordion>
           <Accordion title="Shipping Information">
-            Printed and shipped within 3–5 business days. Free EU shipping on orders over €50. Delivery typically takes 5–10 business days depending on your location.
+            Printed and shipped within 3–5 business days. Free EU shipping on orders over €40. Delivery typically takes 5–10 business days depending on your location.
           </Accordion>
         </div>
       </div>

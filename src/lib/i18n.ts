@@ -71,12 +71,12 @@ export const translations = {
     // ProductDetails
     'product.reviews': 'reviews',
     'product.priceVaries': 'Price varies by size',
-    'product.shipping': 'Free shipping on orders over €50 — No EU customs fees',
+    'product.shipping': 'Free shipping on orders over $50 — Fast US delivery',
     'product.secure': 'Safe & secure checkout',
     'product.customers': '10,000+ Happy setups',
     'product.printed': 'Printed in 3–5 days',
     'product.washable': 'Machine washable',
-    'product.freeShip': 'Free shipping €50+',
+    'product.freeShip': 'Free shipping $50+',
     'product.description': 'Description',
     'product.features': 'Features',
     'product.shippingInfo': 'Shipping Information',
@@ -85,7 +85,7 @@ export const translations = {
     'product.feat3': 'Stitched edges for durability',
     'product.feat4': 'Machine washable at 30°C',
     'product.feat5': '3mm thickness',
-    'product.shippingText': 'Printed and shipped within 3–5 business days. Free EU shipping on orders over €50. Delivery typically takes 5–10 business days depending on your location.',
+    'product.shippingText': 'Printed and shipped within 3–5 business days. Free US shipping on orders over $50. Delivery typically takes 5–8 business days.',
     'product.sale': 'SALE',
 
     // AddToCartButton
@@ -208,12 +208,12 @@ export const translations = {
     // ProductDetails
     'product.reviews': 'reseñas',
     'product.priceVaries': 'El precio varía según el tamaño',
-    'product.shipping': 'Envío gratis en pedidos superiores a €50 — Sin aranceles en la UE',
+    'product.shipping': 'Envío gratis en pedidos superiores a $50 — Entrega rápida en USA',
     'product.secure': 'Pago seguro y protegido',
     'product.customers': '+10.000 setups felices',
     'product.printed': 'Impreso en 3–5 días',
     'product.washable': 'Lavable a máquina',
-    'product.freeShip': 'Envío gratis +€50',
+    'product.freeShip': 'Envío gratis +$50',
     'product.description': 'Descripción',
     'product.features': 'Características',
     'product.shippingInfo': 'Información de envío',
@@ -222,7 +222,7 @@ export const translations = {
     'product.feat3': 'Bordes cosidos para mayor durabilidad',
     'product.feat4': 'Lavable a máquina a 30°C',
     'product.feat5': '3mm de grosor',
-    'product.shippingText': 'Impreso y enviado en 3–5 días hábiles. Envío gratis a la UE en pedidos superiores a €50. La entrega suele tardar entre 5 y 10 días hábiles según tu ubicación.',
+    'product.shippingText': 'Impreso y enviado en 3–5 días hábiles. Envío gratis en USA en pedidos superiores a $50. La entrega suele tardar entre 5 y 8 días hábiles.',
     'product.sale': 'OFERTA',
 
     // AddToCartButton
